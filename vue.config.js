@@ -12,10 +12,10 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  publicPath: '/x-lab-web/',
   filenameHashing: false,
-  outputDir: 'dist',
-  assetsDir: 'assets',
+  outputDir: 'docs',
+  assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   configureWebpack: {
@@ -24,11 +24,7 @@ module.exports = {
         patterns: [
           {
             from: path.resolve(__dirname, './config'),
-            to: path.resolve(__dirname, './dist/config')
-          },
-          {
-            from: path.resolve(__dirname, './src/assets/images'),
-            to: path.resolve(__dirname, './dist/config')
+            to: path.resolve(__dirname, './docs/config')
           },
         ]
       })
