@@ -41,8 +41,7 @@ export default {
   padding: 50px 64px;
   .title {
     text-align: left;
-        font-size: 32px;
-
+   font-size: 32px;
   }
   .documentInfo-content {
     color: #0000ff;

@@ -12,7 +12,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/x-lab-web/',
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/x-lab-web/',
   filenameHashing: false,
   outputDir: 'docs',
   assetsDir: 'static',
@@ -25,7 +25,7 @@ module.exports = {
           {
             from: path.resolve(__dirname, './config'),
             to: path.resolve(__dirname, './docs/config')
-          },
+          }
         ]
       })
     ]

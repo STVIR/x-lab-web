@@ -9,7 +9,7 @@
           v-if="formItem.type === 'radioGroup'"
           :label="formItem.label"
         >
-          <el-radio-group v-model="radio1">
+          <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
             <el-radio-button
               v-for="(radio, radioIndex) in formItem.radioList"
               :key="radioIndex"
@@ -17,9 +17,16 @@
             >{{ radio.value }}</el-radio-button>
           </el-radio-group>
         </el-form-item>
-        <el-form-item v-else class="text" :label="formItem.label">
-          {{ formItem.value }}
+        <el-form-item
+          v-else-if="formItem.type === 'cmd'"
+          class="text"
+          :label="formItem.label"
+        >
+          {{ formatString(valueObj) }}
         </el-form-item>
+        <!-- <el-form-item v-else class="text" :label="formItem.label">
+          {{ formItem.value }}
+        </el-form-item> -->
       </div>
     </el-form>
     <!--
@@ -49,6 +56,8 @@ export default {
     return {
       title: installInfoConfig.title,
       formConfig: installInfoConfig.formConfig,
+      cmdObj: installInfoConfig.cmdObj,
+      valueObj: installInfoConfig.valueObj,
       exampleInfo: installInfoConfig.exampleInfo,
       form: {
         name: '',
@@ -59,15 +68,18 @@ export default {
         type: [],
         resource: '',
         desc: ''
-      },
-      radio1: '上海',
-      radio2: '上海',
-      radio3: '上海'
+      }
     }
   },
   methods: {
     onSubmit() {
       console.log('submit!')
+    },
+    formatString(obj) {
+      let tem = Object.values(obj)
+      tem = tem.toString().replaceAll(',', '')
+
+      return this.cmdObj[tem] || ''
     }
   }
 }
@@ -79,13 +91,13 @@ export default {
   padding: 50px 64px;
   .title {
     text-align: left;
-        font-size: 32px;
+    font-size: 32px;
   }
   .text {
     :deep(.el-form-item__content) {
       background: #f2f2f2;
       padding: 10px;
-          text-align: left;
+      text-align: left;
     }
   }
   :deep(.el-form-item__content) {

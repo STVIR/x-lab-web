@@ -110,7 +110,6 @@ export default {
       console.log(key, keyPath)
     },
     handleClickMenu(item) {
-      
       if (item.isGoAnchor) {
         this.handleAnchor(item.id)
         return
