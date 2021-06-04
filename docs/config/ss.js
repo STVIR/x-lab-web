@@ -105,6 +105,40 @@ export const installInfoConfig = {
     nerveX source r0.3.2 pip install . --user pip install -e . --userf`
     }
   ],
+  valueObj: { 
+    radio0: '0.1',
+    radio1: 'Linux',
+    radio2: 'Pip'
+  },
+  cmdObj:{
+    "0.1LinuxPip":"git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd nerveX source r0.3.2 pip install . --user pip install -e . --userf",
+    "0.1LinuxSource":"0.1LinuxSource",
+    "0.1WindowsPip":"0.1WindowsPip",
+    "0.1WindowsSource":"0.1WindowsSource",
+    "0.1MacOSPip":"0.1MacOSPip",
+    "0.1MacOSSource":"0.1MacOSSource",
+
+    "0.2LinuxPip":"0.2LinuxPip",
+    "0.2LinuxSource":"0.2LinuxSource",
+    "0.2WindowsPip":"0.2WindowsPip",
+    "0.2WindowsSource":"0.2WindowsSource",
+    "0.2MacOSPip":"0.2MacOSPip",
+    "0.2MacOSSource":"0.2MacOSSource",
+
+    "0.3LinuxPip":"0.3LinuxPip",
+    "0.3LinuxSource":"0.3LinuxSource",
+    "0.3WindowsPip":"0.3WindowsPip",
+    "0.3WindowsSource":"0.3WindowsSource",
+    "0.3MacOSPip":"0.3MacOSPip",
+    "0.3MacOSSource":"0.3MacOSSource",
+
+    "0.4LinuxPip":"0.4LinuxPip",
+    "0.4LinuxSource":"0.4LinuxSource",
+    "0.4WindowsPip":"0.4WindowsPip",
+    "0.4WindowsSource":"0.4WindowsSource",
+    "0.4MacOSPip":"0.4MacOSPip",
+    "0.4MacOSSource":"0.4MacOSSource",
+  },
   exampleInfo: {
     title: "示例",
     caseLists: [
