@@ -61,7 +61,7 @@ export default {
   background-color: #0079fe;
   display: flex;
   // padding: 20px ;
-  padding: 50px 64px;
+  padding: 50px 80px;
   box-sizing: border-box;
   .footer-left {
     display: flex;

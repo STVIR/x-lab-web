@@ -1,5 +1,6 @@
 <template>
   <div class="HeaderMenu-wraper">
+
     <div class="log">{{ logoText }}</div>
     <el-menu
       :default-active="activeIndex"
@@ -23,9 +24,11 @@
             target="_blank"
           >{{ item.name }}</a>
           <!-- <a class="link" v-if="item.isExternal" href="https://www.ele.me" target="_blank">订单管理</a> -->
-          <span v-else class="item-content" @click="handleClickMenu(item)">{{
-            item.name
-          }}</span>
+          <span
+            v-else
+            class="item-content"
+            @click="handleClickMenu(item)"
+          >{{ item.name }}</span>
         </el-menu-item>
         <el-submenu v-else :index="String(index + 1)">
           <template #title>{{ item.name }}</template>
@@ -87,6 +90,7 @@
         </el-submenu>
       </div> -->
     </el-menu>
+
   </div>
 </template>
 
@@ -168,24 +172,26 @@ export default {
 .HeaderMenu-wraper {
   display: flex;
   width: 100%;
+  // justify-content: center;
+  background-color: #0079fe;
   .log {
-    background-color: #0079fe;
+    // background-color: #0079fe;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 130px;
     color: #fff;
-   font-weight: 650;
+    font-weight: 650;
     font-style: normal;
     font-size: 28px;
-        width: 166px;
+    width: 166px;
   }
   .el-menu.el-menu--horizontal {
     border-bottom: none;
   }
   .menu-wraper {
-    flex: 1;
+    // flex: 1;
     display: flex;
 
     // .link {

@@ -1,7 +1,13 @@
 <template>
   <div class="home">
     <el-row type="flex" justify="center">
-      <el-col :span="16">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 24 }"
+        :xl="{ span: 18 }"
+      >
         <HeaderMenu />
         <InstallInfo />
         <DocumentInfo />

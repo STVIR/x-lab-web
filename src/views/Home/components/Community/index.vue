@@ -1,30 +1,38 @@
 <template>
-  <div id="community" class="community-wraper">
-    <h1 class="community-title">
-      {{ title }}
-    </h1>
-    <div class="community-content">
-      <div
-        v-for="(item, index) in communityLists"
-        :key="index"
-        class="content-item"
+  <div id="community" class="community-wraper section-wraper">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
       >
-        <div class="item-content">
-          <h3 class="title">{{ item.title }}</h3>
-          <div class="desc">
-            {{ item.desc }}
-          </div>
-          <div class="link">
-            <!-- <a :href="item.link" target="_blank">查看详情</a> -->
-            <el-link
-              :href="item.link"
-              target="_blank"
-              :underline="false"
-            >{{ item.linkText }}</el-link>
+        <h1 class="community-title">
+          {{ title }}
+        </h1>
+        <div class="community-content">
+          <div
+            v-for="(item, index) in communityLists"
+            :key="index"
+            class="content-item"
+          >
+            <div class="item-content">
+              <h3 class="title">{{ item.title }}</h3>
+              <div class="desc">
+                {{ item.desc }}
+              </div>
+              <div class="link">
+                <!-- <a :href="item.link" target="_blank">查看详情</a> -->
+                <el-link :href="item.link" target="_blank" :underline="false">{{
+                  item.linkText
+                }}</el-link>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -46,7 +54,7 @@ export default {
 .community-wraper {
   // box-shadow: 0 2px 12px 0 #dddddd;
   box-shadow: 0 4px 12px 0 #f3f3f3;
-  padding: 50px 64px;
+  // padding: 50px 64px;
   .community-title {
     text-align: left;
     font-size: 32px;
@@ -55,13 +63,15 @@ export default {
   .community-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     .content-item {
-      width: 340px;
+      width: 330px;
       height: 220px;
       background: #cccccc;
       padding: 16px;
       color: #fff;
+      margin-top: 10px;
+      margin-right: 16px;
       &:hover {
         background-color: #34495e;
       }
@@ -90,12 +100,19 @@ export default {
 
         &:hover {
           background-color: #ffffff;
-           :deep(.el-link--inner) {
+          :deep(.el-link--inner) {
             color: #969696;
           }
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1380px) {
+  .content-item {
+    width: 28% !important;
+    min-width: 200px;
   }
 }
 </style>

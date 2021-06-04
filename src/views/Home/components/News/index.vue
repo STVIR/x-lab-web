@@ -1,34 +1,44 @@
 <template>
-  <div id="news" class="news-wraper">
-    <h1 class="news-title">
-      {{ title }}
-    </h1>
-    <div class="news-content">
-      <div class="left carousel-wrap ">
-        <el-carousel height="500px">
-          <el-carousel-item v-for="(item, index) in carouselLists" :key="index">
-            <img class="news-img" :src="item.imgUrl" alt="">
-          </el-carousel-item>
-        </el-carousel>
-      </div>
-      <div class="right text-wrap">
-        <ul>
-          <li
-            v-for="(news, newsIndex) in newLists"
-            :key="newsIndex"
-            class="text-item"
-          >
-            <span class="dot" />
-            <div class="text-content">
-              <span class="text">
-                {{ news.content }}
-              </span>
-              <span class="time"> {{ news.time }}</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div id="news" class="news-wraper section-wraper">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
+      >
+        <h1 class="news-title">
+          {{ title }}
+        </h1>
+        <div class="news-content">
+          <div class="left carousel-wrap ">
+            <el-carousel height="500px">
+              <el-carousel-item v-for="(item, index) in carouselLists" :key="index">
+                <img class="news-img" :src="item.imgUrl" alt="">
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+          <div class="right text-wrap">
+            <ul>
+              <li
+                v-for="(news, newsIndex) in newLists"
+                :key="newsIndex"
+                class="text-item"
+              >
+                <span class="dot" />
+                <div class="text-content">
+                  <span class="text">
+                    {{ news.content }}
+                  </span>
+                  <span class="time"> {{ news.time }}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -55,7 +65,7 @@ export default {
 .news-wraper {
   // box-shadow: 0 2px 12px 0 #dddddd;
   box-shadow: 0 4px 12px 0 #f3f3f3;
-  padding: 50px 64px;
+  // padding: 50px 64px;
   .news-title {
     text-align: left;
     font-size: 32px;

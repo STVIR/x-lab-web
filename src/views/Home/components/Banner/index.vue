@@ -50,7 +50,7 @@ export default {
   background-size: 4660px 462px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 74px;
+  padding: 0px 80px;
   box-sizing: border-box;
   .left {
     display: flex;

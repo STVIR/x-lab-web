@@ -35,7 +35,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0px 74px;
+  padding: 0px 80px;
   box-sizing: border-box;
   .banner-text {
     font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC',

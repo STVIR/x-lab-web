@@ -1,11 +1,21 @@
 <template>
   <div id="documentInfo" class="documentInfo">
-    <h3 class="title">
-      {{ title }}
-    </h3>
-    <div class="documentInfo-content">
-      <p>{{ content }}</p>
-    </div>
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 20 }"
+        :xl="{ span: 20 }"
+      >
+        <h3 class="title">
+          {{ title }}
+        </h3>
+        <div class="documentInfo-content">
+          <p>{{ content }}</p>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 

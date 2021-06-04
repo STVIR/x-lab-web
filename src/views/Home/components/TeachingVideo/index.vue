@@ -1,21 +1,31 @@
 <template>
-  <div id="teachingVideo" class="teachingVideo-wraper">
-    <h1 class="teachingVideo-title">
-      {{ title }}
-    </h1>
-    <div class="teachingVideo-content">
-      <div
-        v-for="(item, index) in teachingVideoLists"
-        :key="index"
-        class="content-item"
+  <div id="teachingVideo" class="teachingVideo-wraper section-wraper">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
       >
-        <a class="item-content" :href="item.videoLink" target="_blank">
-          <div class="videoImg">
-            <i class="el-icon-video-play video-icon" />
+        <h1 class="teachingVideo-title">
+          {{ title }}
+        </h1>
+        <div class="teachingVideo-content">
+          <div
+            v-for="(item, index) in teachingVideoLists"
+            :key="index"
+            class="content-item"
+          >
+            <a class="item-content" :href="item.videoLink" target="_blank">
+              <div class="videoImg">
+                <i class="el-icon-video-play video-icon" />
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -27,7 +37,6 @@ export default {
     return {
       title: teachingVideoConfig.title,
       teachingVideoLists: teachingVideoConfig.teachingVideoLists
-
     }
   },
   mounted() {},
@@ -39,7 +48,7 @@ export default {
 .teachingVideo-wraper {
   // box-shadow: 0 2px 12px 0 #dddddd;
   box-shadow: 0 4px 12px 0 #f3f3f3;
-  padding: 50px 64px;
+  // padding: 50px 64px;
   .teachingVideo-title {
     text-align: left;
     font-size: 32px;
@@ -48,9 +57,11 @@ export default {
   .teachingVideo-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     .content-item {
       text-align: left;
+      margin-top: 10px;
+      margin-right: 16px;
       .item-title {
         font-size: 24px;
       }
@@ -59,7 +70,7 @@ export default {
         display: inline-block;
         width: 340px;
         height: 186px;
-         text-decoration: none;
+        text-decoration: none;
         background-color: #ccc;
         &:hover {
           background-color: #34495e;

@@ -1,47 +1,65 @@
 <template>
-  <div id="ssInstallInfo" class="ssInstallInfo">
-    <h3 class="title">
-      {{ title }}
-    </h3>
-    <el-form ref="form" :model="form" label-position="left" label-width="150px">
-      <div v-for="(formItem, formItemIndex) in formConfig" :key="formItemIndex">
-        <el-form-item
-          v-if="formItem.type === 'radioGroup'"
-          :label="formItem.label"
+  <div id="ssInstallInfo" class="ssInstallInfo section-wraper">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
+      >
+        <h3 class="title">
+          {{ title }}
+        </h3>
+        <el-form
+          ref="form"
+          :model="form"
+          label-position="left"
+          label-width="150px"
         >
-          <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
-            <el-radio-button
-              v-for="(radio, radioIndex) in formItem.radioList"
-              :key="radioIndex"
-              :label="radio.label"
-            >{{ radio.value }}</el-radio-button>
-          </el-radio-group>
-        </el-form-item>
-        <el-form-item
-          v-else-if="formItem.type === 'cmd'"
-          class="text"
-          :label="formItem.label"
-        >
-          {{ formatString(valueObj) }}
-        </el-form-item>
-      </div>
-    </el-form>
+          <div
+            v-for="(formItem, formItemIndex) in formConfig"
+            :key="formItemIndex"
+          >
+            <el-form-item
+              v-if="formItem.type === 'radioGroup'"
+              :label="formItem.label"
+            >
+              <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
+                <el-radio-button
+                  v-for="(radio, radioIndex) in formItem.radioList"
+                  :key="radioIndex"
+                  :label="radio.label"
+                >{{ radio.value }}</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item
+              v-else-if="formItem.type === 'cmd'"
+              class="text"
+              :label="formItem.label"
+            >
+              {{ formatString(valueObj) }}
+            </el-form-item>
+          </div>
+        </el-form>
 
-    <div class="ssInstallInfo-example">
-      <h4 class="title">
-        {{ exampleInfo.title }}
-      </h4>
-      <div class="content">
-        <div
-          v-for="(caseItem, caseIndex) in exampleInfo.caseLists"
-          :key="caseIndex"
-          class="case"
-        >
-          <div class="case-title">{{ caseItem.title }}</div>
-          <div class="case-content">{{ caseItem.content }}</div>
+        <div class="ssInstallInfo-example">
+          <h4 class="title">
+            {{ exampleInfo.title }}
+          </h4>
+          <div class="content">
+            <div
+              v-for="(caseItem, caseIndex) in exampleInfo.caseLists"
+              :key="caseIndex"
+              class="case"
+            >
+              <div class="case-title">{{ caseItem.title }}</div>
+              <div class="case-content">{{ caseItem.content }}</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -96,7 +114,7 @@ export default {
     :deep(.el-form-item__content) {
       background: #f2f2f2;
       padding: 10px;
-       text-align: left;
+      text-align: left;
     }
   }
   :deep(.el-form-item__content) {

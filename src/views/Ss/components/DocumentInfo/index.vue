@@ -1,12 +1,23 @@
 <template>
-  <div id="ssDocumentInfo" class="ssDocumentInfo">
-    <h3 class="title">
-      {{ title }}
-    </h3>
-    <div class="ssDocumentInfo-content">
-      <p>{{ content }}</p>
-    </div>
+  <div id="ssDocumentInfo" class="ssDocumentInfo section-wraper">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
+      >
+        <h3 class="title">
+          {{ title }}
+        </h3>
+        <div class="ssDocumentInfo-content">
+          <p>{{ content }}</p>
+        </div>
+      </el-col>
+    </el-row>
   </div>
+
 </template>
 
 <script>

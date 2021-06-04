@@ -1,35 +1,43 @@
 <template>
   <div id="neverxInstallInfo" class="neverxInstallInfo">
-    <h3 class="title">
-      {{ title }}
-    </h3>
-    <el-form ref="form" :model="form" label-position="left" label-width="150px">
-      <div v-for="(formItem, formItemIndex) in formConfig" :key="formItemIndex">
-        <el-form-item
-          v-if="formItem.type === 'radioGroup'"
-          :label="formItem.label"
-        >
-          <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
-            <el-radio-button
-              v-for="(radio, radioIndex) in formItem.radioList"
-              :key="radioIndex"
-              :label="radio.label"
-            >{{ radio.value }}</el-radio-button>
-          </el-radio-group>
-        </el-form-item>
-        <el-form-item
-          v-else-if="formItem.type === 'cmd'"
-          class="text"
-          :label="formItem.label"
-        >
-          {{ formatString(valueObj) }}
-        </el-form-item>
-        <!-- <el-form-item v-else class="text" :label="formItem.label">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 20 }"
+        :xl="{ span: 20 }"
+      >
+        <h3 class="title">
+          {{ title }}
+        </h3>
+        <el-form ref="form" :model="form" label-position="left" label-width="150px">
+          <div v-for="(formItem, formItemIndex) in formConfig" :key="formItemIndex">
+            <el-form-item
+              v-if="formItem.type === 'radioGroup'"
+              :label="formItem.label"
+            >
+              <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
+                <el-radio-button
+                  v-for="(radio, radioIndex) in formItem.radioList"
+                  :key="radioIndex"
+                  :label="radio.label"
+                >{{ radio.value }}</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+            <el-form-item
+              v-else-if="formItem.type === 'cmd'"
+              class="text"
+              :label="formItem.label"
+            >
+              {{ formatString(valueObj) }}
+            </el-form-item>
+            <!-- <el-form-item v-else class="text" :label="formItem.label">
           {{ formItem.value }}
         </el-form-item> -->
-      </div>
-    </el-form>
-    <!--
+          </div>
+        </el-form>
+        <!--
     <div class="neverxInstallInfo-example">
       <h4 class="title">
         {{ exampleInfo.title }}
@@ -45,6 +53,8 @@
         </div>
       </div>
     </div> -->
+      </el-col>
+    </el-row>
   </div>
 </template>
 
