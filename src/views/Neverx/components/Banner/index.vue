@@ -12,7 +12,7 @@ import { bannerConfig } from '../../../../../config/neverx.js'
 export default {
   data() {
     return {
-      bannerTextSmall: bannerConfig.bannerTextSmall
+      bannerTextSmall: window.neverxConfig.bannerConfig.bannerTextSmall
     }
   }
 }

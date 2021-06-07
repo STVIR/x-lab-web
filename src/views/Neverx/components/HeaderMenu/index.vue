@@ -47,8 +47,8 @@ export default {
   data() {
     return {
       activeIndex: '',
-      logoText: headerMenuConfig.logoText,
-      menuLists: headerMenuConfig.menuLists
+      logoText: window.neverxConfig.headerMenuConfig.logoText,
+      menuLists: window.neverxConfig.headerMenuConfig.menuLists
     }
   },
   methods: {

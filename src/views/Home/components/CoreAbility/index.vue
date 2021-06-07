@@ -33,8 +33,8 @@ import { coreAbilityConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      title: coreAbilityConfig.title,
-      coreAbilityLists: coreAbilityConfig.coreAbilityLists
+      title:  window.homeConfig.coreAbilityConfig.title,
+      coreAbilityLists:  window.homeConfig.coreAbilityConfig.coreAbilityLists
     }
   },
   methods: {

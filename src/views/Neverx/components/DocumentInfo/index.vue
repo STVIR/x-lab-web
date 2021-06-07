@@ -32,8 +32,8 @@ import { documentInfoConfig, algorithmInfoConfig } from '../../../../../config/n
 export default {
   data() {
     return {
-      documentInfoConfig: documentInfoConfig,
-      algorithmInfoConfig: algorithmInfoConfig
+      documentInfoConfig: window.neverxConfig.documentInfoConfig,
+      algorithmInfoConfig: window.neverxConfig.algorithmInfoConfig
 
     }
   },

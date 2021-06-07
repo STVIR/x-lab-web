@@ -35,8 +35,8 @@ import { teachingVideoConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      title: teachingVideoConfig.title,
-      teachingVideoLists: teachingVideoConfig.teachingVideoLists
+      title:  window.homeConfig.teachingVideoConfig.title,
+      teachingVideoLists:  window.homeConfig.teachingVideoConfig.teachingVideoLists
     }
   },
   mounted() {},

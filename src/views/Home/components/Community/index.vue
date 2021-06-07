@@ -42,8 +42,8 @@ import { communityConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      title: communityConfig.title,
-      communityLists: communityConfig.communityLists
+      title:  window.homeConfig.communityConfig.title,
+      communityLists:  window.homeConfig.communityConfig.communityLists
     }
   },
   methods: {}

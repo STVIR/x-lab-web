@@ -12,7 +12,8 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/x-lab-web/',
+  // publicPath: process.env.NODE_ENV === 'development' ? '/' : '/x-lab-web/',
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/',
   filenameHashing: false,
   outputDir: 'docs',
   assetsDir: 'static',
@@ -22,6 +23,14 @@ module.exports = {
     plugins: [
       new CopyPlugin({
         patterns: [
+          // {
+          //   from: path.resolve(__dirname, './config'),
+          //   to: path.resolve(__dirname, './docs/config')
+          // },
+          {
+            from: path.resolve(__dirname, './static'),
+            to: path.resolve(__dirname, './docs/static'),
+          },
           {
             from: path.resolve(__dirname, './config'),
             to: path.resolve(__dirname, './docs/config')

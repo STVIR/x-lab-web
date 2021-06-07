@@ -43,21 +43,25 @@
 </template>
 
 <script>
-import { newsConfig } from '../../../../../config/home.js'
+// import { newsConfig } from '../../../../../config/home.js'
 
 export default {
   data() {
     return {
-      title: newsConfig.title,
-      carouselLists: newsConfig.carouselLists,
-      newLists: newsConfig.newLists
+      title: window.homeConfig.newsConfig.title,
+      carouselLists: window.homeConfig.newsConfig.carouselLists,
+      newLists: window.homeConfig.newsConfig.newLists
     }
   },
   methods: {
     onSubmit() {
       console.log('submit!')
     }
-  }
+  },
+
+  created() {
+   console.log('window22222222222222222222222222222222', window.config);  
+  },
 }
 </script>
 

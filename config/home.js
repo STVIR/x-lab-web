@@ -1,6 +1,7 @@
+var home = {}
 // HeaderMenu 
-export const headerMenuConfig = {
-  logoText: 'Oria',
+home.headerMenuConfig = {
+  logoText: '1111',
   menuLists: [
     {
       path: "/neverx",
@@ -42,13 +43,13 @@ export const headerMenuConfig = {
 }
 
 // Banner 
-export const bannerConfig = {
+home.bannerConfig = {
   bannerText: "From research to production？", // 正常
   bannerTextSmall: "NeverX is X-Lab Deep Reinforcement Learning Framework System，……", // 小号
 }
 
 // 核心能力 
-export const coreAbilityConfig = {
+home.coreAbilityConfig = {
   title: "核心能力",
   coreAbilityLists: [
     {
@@ -77,15 +78,15 @@ export const coreAbilityConfig = {
 }
 
 // 场景案例 
-export const sceneCaseConfig = {
+home.sceneCaseConfig = {
   title: "场景案例",
   caseLists: [
     {
-      imgUrl: require('@/assets/images/home/sceneCase/case_image_01.png'),
+      imgUrl: './static/images/home/sceneCase/case_image_01.png',
       desc: '星际……'
     },
     {
-      imgUrl: require('@/assets/images/home/sceneCase/case_image_02.png'),
+      imgUrl: './static/images/home/sceneCase/case_image_02.png',
       desc: '自动驾驶……'
     }
   ],
@@ -93,16 +94,16 @@ export const sceneCaseConfig = {
 }
 
 // 最新消息 
-export const newsConfig = {
+home.newsConfig = {
   title: "最新消息",
   // 左侧轮播图
   carouselLists: [
     {
-      imgUrl: require('@/assets/images/home/news/news_image_01.png'),
+      imgUrl: ('./static/images/home/news/news_image_01.png'),
       desc: '星际……'
     },
     {
-      imgUrl: require('@/assets/images/home/news/news_image_02.png'),
+      imgUrl: ('./static/images/home/news/news_image_02.png'),
       desc: '自动驾驶……'
     }
   ],
@@ -136,7 +137,7 @@ export const newsConfig = {
 }
 
 // 社区信息 
-export const communityConfig = {
+home.communityConfig = {
   title: "社区信息",
   communityLists: [
     {
@@ -166,7 +167,7 @@ export const communityConfig = {
 }
 
 // 教学视频 
-export const teachingVideoConfig = {
+home.teachingVideoConfig = {
   title: "教学视频",
   teachingVideoLists: [
     {
@@ -184,7 +185,7 @@ export const teachingVideoConfig = {
 
 
 // Footer 
-export const footerConfig = {
+home.footerConfig = {
   footerInfoLists: [
     {
       title: '相关资源',
@@ -240,11 +241,14 @@ export const footerConfig = {
   ],
   qrcodeLists: [
     {
-      imgUrl: require('@/assets/images/home/footer/qrcode_image_01.png')
+      imgUrl: ('./static/images/home/footer/qrcode_image_01.png')
     },
     {
-      imgUrl: require('@/assets/images/home/footer/qrcode_image_02.png')
+      imgUrl: ('./static/images/home/footer/qrcode_image_02.png')
     }
   ]
 }
 
+window['homeConfig'] = home
+
+console.log('home111111111111111', home);

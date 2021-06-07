@@ -1,6 +1,7 @@
+let ss={}
 
 // HeaderMenu 
-export const headerMenuConfig = {
+ ss.headerMenuConfig = {
   logoText: 'ss',
   menuLists: [
     {
@@ -33,14 +34,14 @@ export const headerMenuConfig = {
 }
 
 // Banner 
-export const bannerConfig = {
+ ss.bannerConfig = {
   bannerText: "SS", // 正常
   bannerTextSmall: "SS is X-Lab Deep Reinforcement Learning《星际争霸2》是一款RTS（即时战略）游戏，说白了就是造农民采矿、造建筑、造兵、攀科技，最后派兵拆光对手的建筑 System", // 小号
 }
 
 
 // 安装
-export const installInfoConfig = {
+ ss.installInfoConfig = {
   title: '安装',
 
   formConfig: [
@@ -159,13 +160,13 @@ export const installInfoConfig = {
   }
 }
 // 文档
-export const documentInfoConfig = {
+ ss.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 数据 dataDetail: 数据详情介绍  dataFormat:数据格式 dataBenchmark:数据评测  dataDownload:数据下载
-export const dataInfoConfig = {
+ ss.dataInfoConfig = {
   title: "数据",
   replay: {
     title: "replay",
@@ -179,11 +180,18 @@ export const dataInfoConfig = {
   video: {
     title: "视频",
     videoLink: '//vjs.zencdn.net/v/oceans.mp4',
-    vedeoImg: require('@/assets/images/ss/video/video_image_01.png'), //视频展示的封面
-
+    vedeoImg: './static/images/ss/video/video_image_01.png', //视频展示的封面
   },
-  
 
 }
 
 
+//  default{
+//   headerMenuConfig,
+//  bannerConfig,
+//  installInfoConfig,
+//  documentInfoConfig,
+//  dataInfoConfig
+
+// }
+window['ssConfig']=ss

@@ -4,14 +4,35 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video-js.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video.min.js"></script>
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <!-- <script  src="../src/utils/r.js"   data-main="../config/index.js"></script> -->
+    <!-- <script>
+      window.config={}
+    
+    </script> -->
+      <!-- <script  src="./config/home.js"></script>
+      <script  src="./config/neverx.js"></script>
+      <script  src="./config/ss.js"></script>
+      <script  src="./config/xad.js"></script> -->
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video-js.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.3.0/video.min.js"></script> -->
+
+<script>
+  // 切换完语言后，后端修改config文件的language，如不采用如下操作，浏览器会认为config文件没有改变，直接使用缓存中的config文件，达不到语言切换的效果
+  // document.write('<script type="text/javascript" src="../config/index.js?v=' + Math.random() + '"><\/script>');
+    window.config={}
+    function addJs(urls) {
+      urls.map(url => document.write('<script async type="text/javascript" src="' + url +'?v='+Math.random() +'"><\/script>'))
+    }
+
+    addJs(["../config/home.js", "./config/neverx.js",'./config/ss.js','./config/xad.js'])
+</script>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're222 sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->

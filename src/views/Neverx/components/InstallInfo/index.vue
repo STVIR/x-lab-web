@@ -64,11 +64,11 @@ import { installInfoConfig } from '../../../../../config/neverx.js'
 export default {
   data() {
     return {
-      title: installInfoConfig.title,
-      formConfig: installInfoConfig.formConfig,
-      cmdObj: installInfoConfig.cmdObj,
-      valueObj: installInfoConfig.valueObj,
-      exampleInfo: installInfoConfig.exampleInfo,
+      title: window.neverxConfig.installInfoConfig.title,
+      formConfig: window.neverxConfig.installInfoConfig.formConfig,
+      cmdObj: window.neverxConfig.installInfoConfig.cmdObj,
+      valueObj: window.neverxConfig.installInfoConfig.valueObj,
+      exampleInfo: window.neverxConfig.installInfoConfig.exampleInfo,
       form: {
         name: '',
         region: '',

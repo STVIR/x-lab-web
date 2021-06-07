@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import { bannerConfig } from '../../../../../config/home.js'
+// import { bannerConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      bannerText: bannerConfig.bannerText,
-      bannerTextSmall: bannerConfig.bannerTextSmall
+      bannerText: window.homeConfig.bannerConfig.bannerText,
+      bannerTextSmall: window.homeConfig.bannerConfig.bannerTextSmall
     }
   },
   methods: {
@@ -31,7 +31,12 @@ export default {
         path: '/neverx'
       })
     }
-  }
+  },
+
+  created() {
+     console.log(' window.config',  window.homeConfig);
+    //  this.bannerText= window.homeConfig.bannerConfig.bannerText
+  },
 }
 </script>
 

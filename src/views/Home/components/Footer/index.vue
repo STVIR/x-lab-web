@@ -45,8 +45,8 @@ import { footerConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      footerInfoLists: footerConfig.footerInfoLists,
-      qrcodeLists: footerConfig.qrcodeLists
+      footerInfoLists:  window.homeConfig.footerConfig.footerInfoLists,
+      qrcodeLists:  window.homeConfig.footerConfig.qrcodeLists
 
     }
   },

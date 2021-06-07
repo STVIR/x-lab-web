@@ -19,9 +19,13 @@
             class="content-item"
           >
             <div class="item-content">
-              <el-image :src="item.imgUrl" fit="fill" />
+              <!-- <el-image src="@/assets/images/home/news/news_image_01.png" fit="fill" /> -->
+              
+            <img class="item-img" :src="item.imgUrl" alt="">
+             
               <div class="desc">
                 {{ item.desc }}
+                <!-- {{ item.imgUrl }} -->
               </div>
             </div>
           </div>
@@ -37,8 +41,8 @@ import { sceneCaseConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {
-      title: sceneCaseConfig.title,
-      caseLists: sceneCaseConfig.caseLists
+      title:  window.homeConfig.sceneCaseConfig.title,
+      caseLists:  window.homeConfig.sceneCaseConfig.caseLists
     }
   },
   methods: {}
@@ -66,7 +70,7 @@ export default {
       .item-content {
         display: flex;
         flex-direction: column;
-        .el-image {
+        .item-img {
           width: 520px;
           height: 286px;
         }

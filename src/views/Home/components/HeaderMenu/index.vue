@@ -97,6 +97,7 @@
 <script>
 import { headerMenuConfig } from '../../../../../config/home.js'
 import { isExternal } from '@/utils/validate'
+ console.log(' window.config',  window.config);
 
 export default {
   name: 'Home',
@@ -104,10 +105,14 @@ export default {
   data() {
     return {
       activeIndex: '',
-      logoText: headerMenuConfig.logoText,
-      menuLists: headerMenuConfig.menuLists
+      logoText: window.homeConfig.headerMenuConfig.logoText,
+      menuLists: window.homeConfig.headerMenuConfig.menuLists
     }
   },
+
+ mounted() {
+    console.log('window.config', window.config);
+ },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)

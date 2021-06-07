@@ -1,5 +1,7 @@
+let neverx={}
+
 // HeaderMenu 
-export const headerMenuConfig = {
+ neverx.headerMenuConfig = {
   logoText: 'Neverx',
   menuLists: [
     {
@@ -25,12 +27,12 @@ export const headerMenuConfig = {
 }
 
 // Banner 
-export const bannerConfig = {
+ neverx.bannerConfig = {
   bannerTextSmall: "NeverX is X-Lab Deep Reinforcement Learning Framework System，you can ……", // 小号
 }
 
 // 安装
-export const installInfoConfig = {
+ neverx.installInfoConfig = {
   title: '安装',
 
   formConfig: [
@@ -152,13 +154,24 @@ export const installInfoConfig = {
 
 
 // 文档
-export const documentInfoConfig = {
+ neverx.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 算法
-export const algorithmInfoConfig = {
+ neverx.algorithmInfoConfig = {
   title: "算法",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
+
+//  default{
+//   headerMenuConfig,
+//   bannerConfig,
+//   installInfoConfig,
+//   documentInfoConfig,
+//   algorithmInfoConfig
+
+// }
+
+window['neverxConfig']=neverx

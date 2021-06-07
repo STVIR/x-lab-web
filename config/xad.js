@@ -1,6 +1,6 @@
-
+let xad={}
 // HeaderMenu 
-export const headerMenuConfig = {
+ xad.headerMenuConfig = {
   logoText: 'XAD',
   menuLists: [
     {
@@ -33,7 +33,7 @@ export const headerMenuConfig = {
 }
 
 // 安装
-export const installInfoConfig = {
+ xad.installInfoConfig = {
   title: '安装',
 
   formConfig: [
@@ -135,13 +135,13 @@ export const installInfoConfig = {
 }
 
 // 文档
-export const documentInfoConfig = {
+ xad.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 数据 dataDetail: 数据详情介绍  dataFormat:数据格式 dataBenchmark:数据评测  dataDownload:数据下载
-export const dataInfoConfig = {
+ xad.dataInfoConfig = {
   title: "数据",
   dataDetail: {
     title: "数据详情介绍",
@@ -150,12 +150,12 @@ export const dataInfoConfig = {
     tableData: [
       {
         name: '路口前障碍物停车测试',
-        picture: require('@/assets/images/xad/dataInfo/data_image_01.png'),
+        picture: './static/images/xad/dataInfo/data_image_01.png',
         desc: 'test test',
       },
       {
         name: '路口中不overtake测试',
-        picture: require('@/assets/images/xad/dataInfo/data_image_02.png'),
+        picture: ('./static/images/xad/dataInfo/data_image_02.png'),
         desc: '路口中不overtake测试',
       },
     ],
@@ -252,3 +252,12 @@ export const dataInfoConfig = {
 
 
 }
+//  default{
+//   headerMenuConfig,
+//   installInfoConfig,
+//   documentInfoConfig,
+//   dataInfoConfig,
+
+// }
+
+window['xadConfig']=xad
