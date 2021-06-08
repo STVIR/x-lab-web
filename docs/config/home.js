@@ -1,7 +1,7 @@
 var homeConfig = {}
 // HeaderMenu 
 homeConfig.headerMenuConfig = {
-  logoText: '343',
+  logoText: 'Oria',
   menuLists: [
     {
       path: "/neverx",

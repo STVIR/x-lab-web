@@ -46,9 +46,8 @@ export default {
   data() {
     return {
       activeIndex: '',
-     
-      logoText: ssConfig.headerMenuConfig.logoText,
-      menuLists: ssConfig.headerMenuConfig.menuLists
+      logoText: window.ssConfig.headerMenuConfig.logoText,
+      menuLists: window.ssConfig.headerMenuConfig.menuLists
     }
   },
   methods: {
