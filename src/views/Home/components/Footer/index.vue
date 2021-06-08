@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import { footerConfig } from '../../../../../config/home.js'
 
 export default {
   data() {

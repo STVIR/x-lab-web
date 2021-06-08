@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import { communityConfig } from '../../../../../config/home.js'
 
 export default {
   data() {

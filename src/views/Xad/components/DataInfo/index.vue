@@ -97,16 +97,15 @@
 </template>
 
 <script>
-import { dataInfoConfig } from '../../../../../config/xad.js'
 
 export default {
   data() {
     return {
-      title: dataInfoConfig.title,
-      dataDetail: dataInfoConfig.dataDetail,
-      dataFormat: dataInfoConfig.dataFormat,
-      dataBenchmark: dataInfoConfig.dataBenchmark,
-      dataDownload: dataInfoConfig.dataDownload
+      title: window.xadConfig.dataInfoConfig.title,
+      dataDetail: window.xadConfig.dataInfoConfig.dataDetail,
+      dataFormat: window.xadConfig.dataInfoConfig.dataFormat,
+      dataBenchmark: window.xadConfig.dataInfoConfig.dataBenchmark,
+      dataDownload: window.xadConfig.dataInfoConfig.dataDownload
     }
   },
   methods: {

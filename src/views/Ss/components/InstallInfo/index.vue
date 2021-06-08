@@ -64,16 +64,15 @@
 </template>
 
 <script>
-import { installInfoConfig } from '../../../../../config/ss.js'
 
 export default {
   data() {
     return {
-      title: installInfoConfig.title,
-      formConfig: installInfoConfig.formConfig,
-      cmdObj: installInfoConfig.cmdObj,
-      valueObj: installInfoConfig.valueObj,
-      exampleInfo: installInfoConfig.exampleInfo,
+      title: ssConfig.installInfoConfig.title,
+      formConfig: ssConfig.installInfoConfig.formConfig,
+      cmdObj: ssConfig.installInfoConfig.cmdObj,
+      valueObj: ssConfig.installInfoConfig.valueObj,
+      exampleInfo: ssConfig.installInfoConfig.exampleInfo,
       form: {
         name: '',
         region: '',

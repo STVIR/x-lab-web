@@ -1,6 +1,6 @@
-let xad={}
+var xadConfig={}
 // HeaderMenu 
- xad.headerMenuConfig = {
+ xadConfig.headerMenuConfig = {
   logoText: 'XAD',
   menuLists: [
     {
@@ -33,7 +33,7 @@ let xad={}
 }
 
 // 安装
- xad.installInfoConfig = {
+ xadConfig.installInfoConfig = {
   title: '安装',
 
   formConfig: [
@@ -135,13 +135,13 @@ let xad={}
 }
 
 // 文档
- xad.documentInfoConfig = {
+ xadConfig.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 数据 dataDetail: 数据详情介绍  dataFormat:数据格式 dataBenchmark:数据评测  dataDownload:数据下载
- xad.dataInfoConfig = {
+ xadConfig.dataInfoConfig = {
   title: "数据",
   dataDetail: {
     title: "数据详情介绍",
@@ -260,4 +260,4 @@ let xad={}
 
 // }
 
-window['xadConfig']=xad
+// window['xadConfig']=xad

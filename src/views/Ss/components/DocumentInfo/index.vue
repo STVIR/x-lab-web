@@ -21,13 +21,12 @@
 </template>
 
 <script>
-import { documentInfoConfig } from '../../../../../config/ss.js'
 
 export default {
   data() {
     return {
-      title: documentInfoConfig.title,
-      content: documentInfoConfig.content
+      title: ssConfig.documentInfoConfig.title,
+      content: ssConfig.documentInfoConfig.content
     }
   },
   methods: {

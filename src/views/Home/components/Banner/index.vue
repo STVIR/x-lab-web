@@ -17,7 +17,6 @@
 </template>
 
 <script>
-// import { bannerConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {

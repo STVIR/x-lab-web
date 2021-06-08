@@ -20,13 +20,12 @@
 </template>
 
 <script>
-import { documentInfoConfig } from '../../../../../config/xad.js'
 
 export default {
   data() {
     return {
-      title: documentInfoConfig.title,
-      content: documentInfoConfig.content
+      title: window.xadConfig.documentInfoConfig.title,
+      content: window.xadConfig.documentInfoConfig.content
     }
   },
   methods: {

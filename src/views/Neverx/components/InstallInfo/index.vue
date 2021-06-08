@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import { installInfoConfig } from '../../../../../config/neverx.js'
 
 export default {
   data() {

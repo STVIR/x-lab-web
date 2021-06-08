@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import { headerMenuConfig } from '../../../../../config/ss.js'
 import { isExternal } from '@/utils/validate'
 
 export default {
@@ -48,8 +47,8 @@ export default {
     return {
       activeIndex: '',
      
-      logoText: headerMenuConfig.logoText,
-      menuLists: headerMenuConfig.menuLists
+      logoText: ssConfig.headerMenuConfig.logoText,
+      menuLists: ssConfig.headerMenuConfig.menuLists
     }
   },
   methods: {

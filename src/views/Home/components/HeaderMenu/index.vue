@@ -95,7 +95,6 @@
 </template>
 
 <script>
-import { headerMenuConfig } from '../../../../../config/home.js'
 import { isExternal } from '@/utils/validate'
  console.log(' window.config',  window.config);
 
@@ -111,7 +110,8 @@ export default {
   },
 
  mounted() {
-    console.log('window.config', window.config);
+    // console.log('window.config', window.homeConfig);
+    // this.logoText= window.home.headerMenuConfig.logoText
  },
   methods: {
     handleSelect(key, keyPath) {

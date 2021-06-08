@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import { headerMenuConfig } from '../../../../../config/xad.js'
 import { isExternal } from '@/utils/validate'
 
 export default {
@@ -47,9 +46,8 @@ export default {
   data() {
     return {
       activeIndex: '',
-     
-      logoText: headerMenuConfig.logoText,
-      menuLists: headerMenuConfig.menuLists
+      logoText: window.xadConfig.headerMenuConfig.logoText,
+      menuLists: window.xadConfig.headerMenuConfig.menuLists
     }
   },
   methods: {

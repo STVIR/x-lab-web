@@ -43,7 +43,6 @@
 </template>
 
 <script>
-// import { newsConfig } from '../../../../../config/home.js'
 
 export default {
   data() {

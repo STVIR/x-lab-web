@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import { sceneCaseConfig } from '../../../../../config/home.js'
 
 export default {
   data() {

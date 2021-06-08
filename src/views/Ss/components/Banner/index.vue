@@ -10,12 +10,11 @@
 </template>
 
 <script>
-import { bannerConfig } from '../../../../../config/ss.js'
 export default {
   data() {
     return {
-      bannerText: bannerConfig.bannerText,
-      bannerTextSmall: bannerConfig.bannerTextSmall
+      bannerText: ssConfig.bannerConfig.bannerText,
+      bannerTextSmall: ssConfig.bannerConfig.bannerTextSmall
     }
   }
 }

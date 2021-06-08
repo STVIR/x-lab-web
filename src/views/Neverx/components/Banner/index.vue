@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import { bannerConfig } from '../../../../../config/neverx.js'
 export default {
   data() {
     return {
       bannerTextSmall: window.neverxConfig.bannerConfig.bannerTextSmall
     }
-  }
+  },
+ 
 }
 </script>
 

@@ -41,15 +41,14 @@
 </template>
 
 <script>
-import { dataInfoConfig } from '../../../../../config/ss.js'
 
 export default {
   data() {
     return {
-      title: dataInfoConfig.title,
-      replay: dataInfoConfig.replay,
-      model: dataInfoConfig.model,
-      video: dataInfoConfig.video
+      title: ssConfig.dataInfoConfig.title,
+      replay: ssConfig.dataInfoConfig.replay,
+      model: ssConfig.dataInfoConfig.model,
+      video: ssConfig.dataInfoConfig.video
     }
   },
   methods: {

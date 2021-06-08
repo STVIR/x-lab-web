@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import { teachingVideoConfig } from '../../../../../config/home.js'
 
 export default {
   data() {

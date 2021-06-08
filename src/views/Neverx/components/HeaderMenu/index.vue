@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import { headerMenuConfig } from '../../../../../config/neverx.js'
 import { isExternal } from '@/utils/validate'
 
 export default {

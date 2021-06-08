@@ -1,7 +1,4 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><script>// 切换完语言后，后端修改config文件的language，如不采用如下操作，浏览器会认为config文件没有改变，直接使用缓存中的config文件，达不到语言切换的效果
-  // document.write('<script type="text/javascript" src="../config/index.js?v=' + Math.random() + '"><\/script>');
-    window.config={}
-    function addJs(urls) {
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><script>function addJs(urls) {
       urls.map(url => document.write('<script async type="text/javascript" src="' + url +'?v='+Math.random() +'"><\/script>'))
     }
 

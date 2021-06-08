@@ -1,7 +1,7 @@
-let ss={}
+var ssConfig={}
 
 // HeaderMenu 
- ss.headerMenuConfig = {
+ ssConfig.headerMenuConfig = {
   logoText: 'ss',
   menuLists: [
     {
@@ -34,14 +34,14 @@ let ss={}
 }
 
 // Banner 
- ss.bannerConfig = {
+ ssConfig.bannerConfig = {
   bannerText: "SS", // 正常
   bannerTextSmall: "SS is X-Lab Deep Reinforcement Learning《星际争霸2》是一款RTS（即时战略）游戏，说白了就是造农民采矿、造建筑、造兵、攀科技，最后派兵拆光对手的建筑 System", // 小号
 }
 
 
 // 安装
- ss.installInfoConfig = {
+ ssConfig.installInfoConfig = {
   title: '安装',
 
   formConfig: [
@@ -160,13 +160,13 @@ let ss={}
   }
 }
 // 文档
- ss.documentInfoConfig = {
+ ssConfig.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 数据 dataDetail: 数据详情介绍  dataFormat:数据格式 dataBenchmark:数据评测  dataDownload:数据下载
- ss.dataInfoConfig = {
+ ssConfig.dataInfoConfig = {
   title: "数据",
   replay: {
     title: "replay",
@@ -194,4 +194,4 @@ let ss={}
 //  dataInfoConfig
 
 // }
-window['ssConfig']=ss
+// window['ssConfig']=ss

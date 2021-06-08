@@ -41,15 +41,14 @@
 </template>
 
 <script>
-import { installInfoConfig } from '../../../../../config/xad.js'
 
 export default {
   data() {
     return {
-      title: installInfoConfig.title,
-      formConfig: installInfoConfig.formConfig,
-      cmdObj: installInfoConfig.cmdObj,
-      valueObj: installInfoConfig.valueObj,
+      title: window.xadConfig.installInfoConfig.title,
+      formConfig: window.xadConfig.installInfoConfig.formConfig,
+      cmdObj: window.xadConfig.installInfoConfig.cmdObj,
+      valueObj: window.xadConfig.installInfoConfig.valueObj,
       form: {
         name: '',
         region: '',

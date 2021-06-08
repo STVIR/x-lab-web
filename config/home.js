@@ -1,6 +1,6 @@
-var home = {}
+var homeConfig = {}
 // HeaderMenu 
-home.headerMenuConfig = {
+homeConfig.headerMenuConfig = {
   logoText: '1111',
   menuLists: [
     {
@@ -43,13 +43,13 @@ home.headerMenuConfig = {
 }
 
 // Banner 
-home.bannerConfig = {
+homeConfig.bannerConfig = {
   bannerText: "From research to production？", // 正常
   bannerTextSmall: "NeverX is X-Lab Deep Reinforcement Learning Framework System，……", // 小号
 }
 
 // 核心能力 
-home.coreAbilityConfig = {
+homeConfig.coreAbilityConfig = {
   title: "核心能力",
   coreAbilityLists: [
     {
@@ -78,7 +78,7 @@ home.coreAbilityConfig = {
 }
 
 // 场景案例 
-home.sceneCaseConfig = {
+homeConfig.sceneCaseConfig = {
   title: "场景案例",
   caseLists: [
     {
@@ -94,7 +94,7 @@ home.sceneCaseConfig = {
 }
 
 // 最新消息 
-home.newsConfig = {
+homeConfig.newsConfig = {
   title: "最新消息",
   // 左侧轮播图
   carouselLists: [
@@ -105,6 +105,10 @@ home.newsConfig = {
     {
       imgUrl: ('./static/images/home/news/news_image_02.png'),
       desc: '自动驾驶……'
+    },
+    {
+      imgUrl: ('./static/images/home/news/news_image_03.png'),
+      desc: '自动驾驶3……'
     }
   ],
   // 右侧新闻列表
@@ -137,7 +141,7 @@ home.newsConfig = {
 }
 
 // 社区信息 
-home.communityConfig = {
+homeConfig.communityConfig = {
   title: "社区信息",
   communityLists: [
     {
@@ -167,7 +171,7 @@ home.communityConfig = {
 }
 
 // 教学视频 
-home.teachingVideoConfig = {
+homeConfig.teachingVideoConfig = {
   title: "教学视频",
   teachingVideoLists: [
     {
@@ -185,7 +189,7 @@ home.teachingVideoConfig = {
 
 
 // Footer 
-home.footerConfig = {
+homeConfig.footerConfig = {
   footerInfoLists: [
     {
       title: '相关资源',
@@ -249,6 +253,4 @@ home.footerConfig = {
   ]
 }
 
-window['homeConfig'] = home
-
-console.log('home111111111111111', home);
+// window['homeConfig'] =  home

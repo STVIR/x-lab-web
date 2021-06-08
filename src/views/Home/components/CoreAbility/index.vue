@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { coreAbilityConfig } from '../../../../../config/home.js'
 export default {
   data() {
     return {

@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import { documentInfoConfig, algorithmInfoConfig } from '../../../../../config/neverx.js'
 
 export default {
   data() {
