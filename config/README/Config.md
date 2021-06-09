@@ -1292,3 +1292,18 @@ neverxConfig.documentInfoConfig = {
 
 
 
+# github pages 配置
+
+### 第一步
+
+![](./imgs/gh01.png)
+
+### 第二步
+
+![](./imgs/gh02.png)
+
+
+
+### 访问地址生成
+
+![](./imgs/gh03.png)
