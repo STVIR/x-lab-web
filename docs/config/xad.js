@@ -252,12 +252,3 @@ var xadConfig={}
 
 
 }
-//  default{
-//   headerMenuConfig,
-//   installInfoConfig,
-//   documentInfoConfig,
-//   dataInfoConfig,
-
-// }
-
-// window['xadConfig']=xad

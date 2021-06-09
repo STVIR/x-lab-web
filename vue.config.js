@@ -29,7 +29,7 @@ module.exports = {
           // },
           {
             from: path.resolve(__dirname, './static'),
-            to: path.resolve(__dirname, './docs/static'),
+            to: path.resolve(__dirname, './docs/static')
           },
           {
             from: path.resolve(__dirname, './config'),

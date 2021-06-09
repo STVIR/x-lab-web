@@ -41,8 +41,8 @@
 export default {
   data() {
     return {
-      title:  window.homeConfig.communityConfig.title,
-      communityLists:  window.homeConfig.communityConfig.communityLists
+      title: window.homeConfig.communityConfig.title,
+      communityLists: window.homeConfig.communityConfig.communityLists
     }
   },
   methods: {}

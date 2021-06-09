@@ -13,8 +13,8 @@ export default {
     return {
       bannerTextSmall: window.neverxConfig.bannerConfig.bannerTextSmall
     }
-  },
- 
+  }
+
 }
 </script>
 

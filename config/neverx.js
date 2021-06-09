@@ -37,7 +37,8 @@ neverxConfig.installInfoConfig = {
       label: 'Version',
       type: 'radioGroup',
       value: "",
-      radioList: [{
+      radioList: [
+        {
           label: '0.1',
           value: '0.1'
         },
@@ -126,23 +127,7 @@ neverxConfig.installInfoConfig = {
     "0.4MacOSPip": "0.4MacOSPip",
     "0.4MacOSSource": "0.4MacOSSource",
   },
-  exampleInfo: {
-    title: "示例",
-    caseLists: [{
-        title: "SL训练示例",
-        content: "tag"
-      },
-      {
-        title: "SL训练示例",
-        content: "tag"
-      },
-      {
-        title: "人机对战示例",
-        content: "文本标签"
-      },
-    ]
 
-  }
 }
 
 

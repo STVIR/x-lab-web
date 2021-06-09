@@ -68,11 +68,11 @@
 export default {
   data() {
     return {
-      title: ssConfig.installInfoConfig.title,
-      formConfig: ssConfig.installInfoConfig.formConfig,
-      cmdObj: ssConfig.installInfoConfig.cmdObj,
-      valueObj: ssConfig.installInfoConfig.valueObj,
-      exampleInfo: ssConfig.installInfoConfig.exampleInfo,
+      title: window.ssConfig.installInfoConfig.title,
+      formConfig: window.ssConfig.installInfoConfig.formConfig,
+      cmdObj: window.ssConfig.installInfoConfig.cmdObj,
+      valueObj: window.ssConfig.installInfoConfig.valueObj,
+      exampleInfo: window.ssConfig.installInfoConfig.exampleInfo,
       form: {
         name: '',
         region: '',

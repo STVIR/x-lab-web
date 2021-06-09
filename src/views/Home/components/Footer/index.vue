@@ -44,8 +44,8 @@
 export default {
   data() {
     return {
-      footerInfoLists:  window.homeConfig.footerConfig.footerInfoLists,
-      qrcodeLists:  window.homeConfig.footerConfig.qrcodeLists
+      footerInfoLists: window.homeConfig.footerConfig.footerInfoLists,
+      qrcodeLists: window.homeConfig.footerConfig.qrcodeLists
 
     }
   },

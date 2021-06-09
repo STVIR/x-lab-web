@@ -52,15 +52,14 @@ export default {
       newLists: window.homeConfig.newsConfig.newLists
     }
   },
+
+  created() {
+  },
   methods: {
     onSubmit() {
       console.log('submit!')
     }
-  },
-
-  created() {
-   console.log('window22222222222222222222222222222222', window.config);  
-  },
+  }
 }
 </script>
 

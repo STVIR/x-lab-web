@@ -25,8 +25,8 @@
 export default {
   data() {
     return {
-      title: ssConfig.documentInfoConfig.title,
-      content: ssConfig.documentInfoConfig.content
+      title: window.ssConfig.documentInfoConfig.title,
+      content: window.ssConfig.documentInfoConfig.content
     }
   },
   methods: {

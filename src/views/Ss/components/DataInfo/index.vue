@@ -45,10 +45,10 @@
 export default {
   data() {
     return {
-      title: ssConfig.dataInfoConfig.title,
-      replay: ssConfig.dataInfoConfig.replay,
-      model: ssConfig.dataInfoConfig.model,
-      video: ssConfig.dataInfoConfig.video
+      title: window.ssConfig.dataInfoConfig.title,
+      replay: window.ssConfig.dataInfoConfig.replay,
+      model: window.ssConfig.dataInfoConfig.model,
+      video: window.ssConfig.dataInfoConfig.video
     }
   },
   methods: {

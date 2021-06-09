@@ -32,8 +32,8 @@
 export default {
   data() {
     return {
-      title:  window.homeConfig.coreAbilityConfig.title,
-      coreAbilityLists:  window.homeConfig.coreAbilityConfig.coreAbilityLists
+      title: window.homeConfig.coreAbilityConfig.title,
+      coreAbilityLists: window.homeConfig.coreAbilityConfig.coreAbilityLists
     }
   },
   methods: {

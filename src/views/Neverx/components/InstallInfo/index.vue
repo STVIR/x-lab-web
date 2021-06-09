@@ -67,7 +67,6 @@ export default {
       formConfig: window.neverxConfig.installInfoConfig.formConfig,
       cmdObj: window.neverxConfig.installInfoConfig.cmdObj,
       valueObj: window.neverxConfig.installInfoConfig.valueObj,
-      exampleInfo: window.neverxConfig.installInfoConfig.exampleInfo,
       form: {
         name: '',
         region: '',

@@ -185,13 +185,3 @@ var ssConfig={}
 
 }
 
-
-//  default{
-//   headerMenuConfig,
-//  bannerConfig,
-//  installInfoConfig,
-//  documentInfoConfig,
-//  dataInfoConfig
-
-// }
-// window['ssConfig']=ss

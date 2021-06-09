@@ -24,18 +24,16 @@ export default {
       bannerTextSmall: window.homeConfig.bannerConfig.bannerTextSmall
     }
   },
+
+  created() {
+  },
   methods: {
     goStart() {
       this.$router.push({
         path: '/neverx'
       })
     }
-  },
-
-  created() {
-     console.log(' window.config',  window.homeConfig);
-    //  this.bannerText= window.homeConfig.bannerConfig.bannerText
-  },
+  }
 }
 </script>
 

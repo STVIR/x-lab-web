@@ -34,8 +34,8 @@
 export default {
   data() {
     return {
-      title:  window.homeConfig.teachingVideoConfig.title,
-      teachingVideoLists:  window.homeConfig.teachingVideoConfig.teachingVideoLists
+      title: window.homeConfig.teachingVideoConfig.title,
+      teachingVideoLists: window.homeConfig.teachingVideoConfig.teachingVideoLists
     }
   },
   mounted() {},

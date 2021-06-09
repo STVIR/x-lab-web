@@ -13,8 +13,8 @@
 export default {
   data() {
     return {
-      bannerText: ssConfig.bannerConfig.bannerText,
-      bannerTextSmall: ssConfig.bannerConfig.bannerTextSmall
+      bannerText: window.ssConfig.bannerConfig.bannerText,
+      bannerTextSmall: window.ssConfig.bannerConfig.bannerTextSmall
     }
   }
 }

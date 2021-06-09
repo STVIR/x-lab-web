@@ -96,7 +96,6 @@
 
 <script>
 import { isExternal } from '@/utils/validate'
- console.log(' window.config',  window.config);
 
 export default {
   name: 'Home',
@@ -109,10 +108,10 @@ export default {
     }
   },
 
- mounted() {
-    // console.log('window.config', window.homeConfig);
+  mounted() {
+    console.log('window.config', window.homeConfig);
     // this.logoText= window.home.headerMenuConfig.logoText
- },
+  },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)

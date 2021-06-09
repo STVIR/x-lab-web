@@ -2,7 +2,7 @@ var neverxConfig = {}
 
 // HeaderMenu 
 neverxConfig.headerMenuConfig = {
-  logoText: 'Neverx222',
+  logoText: 'Neverx',
   menuLists: [{
       path: "/neverxInstallInfo",
       name: "安装",
@@ -33,12 +33,12 @@ neverxConfig.bannerConfig = {
 // 安装
 neverxConfig.installInfoConfig = {
   title: '安装',
-
   formConfig: [{
       label: 'Version',
       type: 'radioGroup',
       value: "",
-      radioList: [{
+      radioList: [
+        {
           label: '0.1',
           value: '0.1'
         },
@@ -127,23 +127,7 @@ neverxConfig.installInfoConfig = {
     "0.4MacOSPip": "0.4MacOSPip",
     "0.4MacOSSource": "0.4MacOSSource",
   },
-  exampleInfo: {
-    title: "示例",
-    caseLists: [{
-        title: "SL训练示例",
-        content: "tag"
-      },
-      {
-        title: "SL训练示例",
-        content: "tag"
-      },
-      {
-        title: "人机对战示例",
-        content: "文本标签"
-      },
-    ]
 
-  }
 }
 
 
@@ -159,13 +143,4 @@ neverxConfig.algorithmInfoConfig = {
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
-//  default{
-//   headerMenuConfig,
-//   bannerConfig,
-//   installInfoConfig,
-//   documentInfoConfig,
-//   algorithmInfoConfig
 
-// }
-
-// window['neverxConfig'] = neverx
