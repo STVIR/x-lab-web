@@ -146,10 +146,14 @@ export default {
       .item-content {
         padding: 0 40px;
         display: inline-block;
+         font-weight: 650;
+        font-style: normal;
+        font-size: 16px;
+        color: #cccccc;
       }
 
       &.is-active {
-        background: #0000ff !important;
+        background: #162133 !important;
         border-bottom: 0px;
         border-bottom-color: initial !important;
       }
@@ -166,7 +170,7 @@ export default {
       }
       &.is-active {
         :deep(.el-submenu__title) {
-          background: #0000ff !important;
+          background: #162133 !important;
           border-bottom: 0px;
           border-bottom-color: initial !important;
         }

@@ -1,44 +1,50 @@
 var homeConfig = {}
 // HeaderMenu 
 homeConfig.headerMenuConfig = {
-  logoText: 'Oria',
+  logoText: './static/images/home/logo.png',
   menuLists: [
     {
       path: "/neverx",
-      name: "快速开始",
+      name: "GET STARTED",
     },
     {
       isExternal: true,
       path: "https://www.baidu.com/",
-      name: "文档",
+      name: "DOCUMENTS",
+    },
+    {
+      path: "/teachingVideo",
+      id: "teachingVideo",
+      name: "DI-ZOO",
+      isGoAnchor: true
     },
     {
       path: "/case",
-      name: "案例",
+      name: "DI-X",
       redirect: "/case/xad",
       children: [
         {
           path: "/xad",
-          name: "自动驾驶"
+          name: "DI-dirve"
         },
         {
           path: "/ss",
-          name: "星际争霸"
+          name: "DI-star"
         },
       ]
     },
     {
       path: "/community",
       id: "community",
-      name: "社区",
+      name: "COMMUNITY",
       isGoAnchor: true
     },
-    {
-      path: "/teachingVideo",
-      id: "teachingVideo",
-      name: "教程",
-      isGoAnchor: true
-    },
+    // {
+    //   path: "/teachingVideo",
+    //   id: "teachingVideo",
+    //   name: "教程",
+    //   isGoAnchor: true
+    // },
   ]
 }
 
@@ -48,27 +54,28 @@ homeConfig.bannerConfig = {
   bannerTextSmall: "NeverX is X-Lab Deep Reinforcement Learning Framework System，……", // 小号
 }
 
+
 // 核心能力 
 homeConfig.coreAbilityConfig = {
-  title: "核心能力",
+  title: "KEY FEATURES",
   coreAbilityLists: [
     {
-      title: '特性1',
+      title: 'sss',
       desc:
         'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
     },
     {
-      title: '特性2',
+      title: 'sss',
       desc:
         'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
     },
     {
-      title: '特性3',
+      title: 'sss',
       desc:
         'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
     },
     {
-      title: '特性4',
+      title: 'sss',
       desc:
         'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
     },
@@ -77,17 +84,118 @@ homeConfig.coreAbilityConfig = {
   ]
 }
 
+// 安装
+homeConfig.installInfoConfig = {
+  title: '安装',
+  formConfig: [{
+      label: 'Version',
+      type: 'radioGroup',
+      value: "",
+      radioList: [
+        // {
+        //   label: '0.1',
+        //   value: '0.1'
+        // },
+        {
+          label: '0.2',
+          value: '0.2'
+        },
+        // {
+        //   label: '0.3',
+        //   value: '0.3'
+        // },
+        // {
+        //   label: '0.4',
+        //   value: '0.4'
+        // }
+      ]
+    },
+    {
+      label: 'OS',
+      type: 'radioGroup',
+      radioList: [{
+          label: 'Linux',
+          value: 'Linux'
+        },
+        {
+          label: 'Windows',
+          value: 'Windows'
+        },
+        // {
+        //   label: 'MacOS',
+        //   value: 'MacOS'
+        // }
+      ]
+    },
+    {
+      label: 'Package',
+      type: 'radioGroup',
+      radioList: [{
+          label: 'Pip',
+          value: 'Pip'
+        },
+        {
+          label: 'Source',
+          value: 'Source'
+        }
+      ]
+    },
+    {
+      label: 'Run this Cmd',
+      type: 'cmd',
+      value: `git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd
+    nerveX source r0.3.2 pip install . --user pip install -e . --userf`
+    }
+  ],
+  valueObj: {
+    radio0: '0.2',
+    radio1: 'Linux',
+    radio2: 'Pip'
+  },
+  cmdObj: {
+    "0.1LinuxPip": "git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd nerveX source r0.3.2 pip install . --user pip install -e . --userf",
+    "0.1LinuxSource": "0.1LinuxSource",
+    "0.1WindowsPip": "0.1WindowsPip",
+    "0.1WindowsSource": "0.1WindowsSource",
+    "0.1MacOSPip": "0.1MacOSPip",
+    "0.1MacOSSource": "0.1MacOSSource",
+
+    "0.2LinuxPip": "0.2LinuxPip",
+    "0.2LinuxSource": "0.2LinuxSource",
+    "0.2WindowsPip": "0.2WindowsPip",
+    "0.2WindowsSource": "0.2WindowsSource",
+    "0.2MacOSPip": "0.2MacOSPip",
+    "0.2MacOSSource": "0.2MacOSSource",
+
+    "0.3LinuxPip": "0.3LinuxPip",
+    "0.3LinuxSource": "0.3LinuxSource",
+    "0.3WindowsPip": "0.3WindowsPip",
+    "0.3WindowsSource": "0.3WindowsSource",
+    "0.3MacOSPip": "0.3MacOSPip",
+    "0.3MacOSSource": "0.3MacOSSource",
+
+    "0.4LinuxPip": "0.4LinuxPip",
+    "0.4LinuxSource": "0.4LinuxSource",
+    "0.4WindowsPip": "0.4WindowsPip",
+    "0.4WindowsSource": "0.4WindowsSource",
+    "0.4MacOSPip": "0.4MacOSPip",
+    "0.4MacOSSource": "0.4MacOSSource",
+  },
+
+}
+
+
 // 场景案例 
 homeConfig.sceneCaseConfig = {
-  title: "场景案例",
+  title: "Case",
   caseLists: [
     {
       imgUrl: './static/images/home/sceneCase/case_image_01.png',
-      desc: '星际……'
+      desc: 'DI-star is'
     },
     {
       imgUrl: './static/images/home/sceneCase/case_image_02.png',
-      desc: '自动驾驶……'
+      desc: 'DI-dirve is'
     }
   ],
 
@@ -142,30 +250,32 @@ homeConfig.newsConfig = {
 
 // 社区信息 
 homeConfig.communityConfig = {
-  title: "社区信息",
+  title: "COMMUNITY",
   communityLists: [
     {
-      title: '技术沙龙',
+      title: 'Github',
       desc:
-        '对游戏玩家来说，无论是团队FPS、MOBA竞技还是生存类游戏，稳定、低延迟是获胜的关键。',
+        'OpenDIlab github',
       link: 'https://www.baidu.com',
-      linkText: '查看详情'
+      linkText: '查看详情',
+      icon: ('./static/images/home/community/GitHub.svg')
     },
     {
-      title: 'GitHub社区',
+      title: 'Zhihu',
       desc:
-        '对游戏玩家来说，无论是团队FPS、MOBA竞技还是生存类游戏，稳定、低延迟是获胜的关键。',
+        'OpenDIlab zhihu bbs',
       link: 'https://www.baidu.com',
-      linkText: '查看详情'
+      linkText: '查看详情',
+      icon: ('./static/images/home/community/zhihu.svg')
 
     },
     {
-      title: '比赛……',
+      title: 'QQ Group',
       desc:
-        '对游戏玩家来说，无论是团队FPS、MOBA竞技还是生存类游戏，稳定、低延迟是获胜的关键。',
+        'OpenDIlab QQ group',
       link: 'https://www.baidu.com',
-      linkText: '查看详情'
-
+      linkText: '查看详情',
+      icon: ('./static/images/home/community/QQ.svg')
     }
   ]
 }
@@ -192,54 +302,54 @@ homeConfig.teachingVideoConfig = {
 homeConfig.footerConfig = {
   footerInfoLists: [
     {
-      title: '相关资源',
+      title: 'Resources',
       items: [
         {
-          itemTitle: '文档',
+          itemTitle: 'Tutorials',
           link: 'https://www.baidu.com/'
         },
         {
-          itemTitle: '教程',
+          itemTitle: 'API docs',
+          link: 'https://www.baidu.com/'
+        },
+        // {
+        //   itemTitle: '示例项目',
+        //   link: 'https://www.baidu.com/'
+        // }
+      ]
+    },
+    {
+      title: 'Links',
+      items: [
+        {
+          itemTitle: 'DI-drive',
           link: 'https://www.baidu.com/'
         },
         {
-          itemTitle: '示例项目',
+          itemTitle: 'DI-star',
+          link: 'https://www.baidu.com/'
+        },
+        {
+          itemTitle: 'DI-zoo',
           link: 'https://www.baidu.com/'
         }
       ]
     },
     {
-      title: '友情链接',
+      title: 'Contact us',
       items: [
         {
-          itemTitle: '商汤科技01',
+          itemTitle: 'Github',
           link: 'https://www.baidu.com/'
         },
         {
-          itemTitle: '友情链接01',
+          itemTitle: 'Email',
           link: 'https://www.baidu.com/'
         },
-        {
-          itemTitle: '友情链接02',
-          link: 'https://www.baidu.com/'
-        }
-      ]
-    },
-    {
-      title: '联系我们',
-      items: [
-        {
-          itemTitle: '源码',
-          link: 'https://www.baidu.com/'
-        },
-        {
-          itemTitle: '邮箱',
-          link: 'https://www.baidu.com/'
-        },
-        {
-          itemTitle: '联系我们01',
-          link: 'https://www.baidu.com/'
-        }
+        // {
+        //   itemTitle: '联系我们01',
+        //   link: 'https://www.baidu.com/'
+        // }
       ]
     }
   ],
@@ -253,4 +363,4 @@ homeConfig.footerConfig = {
   ]
 }
 
-// window['homeConfig'] =  home
+

@@ -11,10 +11,11 @@
         <HeaderMenu />
         <Banner />
         <CoreAbility />
+        <InstallInfo></InstallInfo>
         <SceneCase />
-        <News />
+        <!-- <News /> -->
         <Community />
-        <TeachingVideo />
+        <!-- <TeachingVideo /> -->
         <Footer />
       </el-col>
     </el-row>
@@ -25,6 +26,7 @@
 import HeaderMenu from './components/HeaderMenu/index.vue'
 import Banner from './components/Banner/index.vue'
 import CoreAbility from './components/CoreAbility/index.vue'
+import InstallInfo from './components/InstallInfo/index.vue'
 import SceneCase from './components/SceneCase/index.vue'
 import News from './components/News/index.vue'
 import Community from './components/Community/index.vue'
@@ -36,6 +38,7 @@ export default {
     HeaderMenu,
     Banner,
     CoreAbility,
+    InstallInfo,
     SceneCase,
     News,
     Community,

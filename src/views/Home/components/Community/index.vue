@@ -18,16 +18,21 @@
             class="content-item"
           >
             <div class="item-content">
-              <h3 class="title">{{ item.title }}</h3>
-              <div class="desc">
-                {{ item.desc }}
+              <div class="left">
+                <h3 class="title">{{ item.title }}</h3>
+                <div class="desc">
+                  {{ item.desc }}
+                </div>
               </div>
-              <div class="link">
-                <!-- <a :href="item.link" target="_blank">查看详情</a> -->
+
+              <div class="icon">
+                <img :src="item.icon" alt="" />
+              </div>
+              <!-- <div class="link">
                 <el-link :href="item.link" target="_blank" :underline="false">{{
                   item.linkText
                 }}</el-link>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -37,16 +42,15 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       title: window.homeConfig.communityConfig.title,
       communityLists: window.homeConfig.communityConfig.communityLists
-    }
+    };
   },
   methods: {}
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,25 +68,45 @@ export default {
     flex-wrap: wrap;
     // justify-content: space-between;
     .content-item {
-      width: 330px;
-      height: 220px;
-      background: #cccccc;
-      padding: 16px;
+      width: 368px;
+      height: 200px;
+      background: #f9f9f9;
+      
+      // padding: 16px;
       color: #fff;
       margin-top: 10px;
+      &:not(:last-child){
       margin-right: 16px;
-      &:hover {
-        background-color: #34495e;
+
       }
+      .item-content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        .left {
+          margin-right: 60px;
+        }
+      }
+      // &:hover {
+      //   background-color: #34495e;
+      // }
       .title {
         text-align: left;
-        font-size: 20px;
+        font-size: 24px;
         line-height: 36px;
+        font-weight: 650;
+        color: #333333;
+            margin: 0;
       }
       .desc {
         text-align: left;
         font-size: 14px;
         line-height: 20px;
+        // font-size: 16px;
+        font-family: 'Arial', sans-serif;
+        color: #333333;
       }
       .link {
         margin-top: 20px;
@@ -102,6 +126,14 @@ export default {
           :deep(.el-link--inner) {
             color: #969696;
           }
+        }
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
         }
       }
     }

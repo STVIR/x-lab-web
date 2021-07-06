@@ -45,11 +45,11 @@ export default {
   background-attachment: scroll;
   width: 100%;
   height: 328px;
-  background-image: url('../../../../assets/images/bannerBg.png');
-  background-position: right bottom;
+  background-image: url('../../../../../static/images/bannerBg.png');
+  // background-position: right bottom;
   background-repeat: repeat-x;
   background-attachment: scroll;
-  background-size: 4660px 462px;
+  // background-size: 4660px 462px;
   display: flex;
   justify-content: space-between;
   padding: 0px 80px;
