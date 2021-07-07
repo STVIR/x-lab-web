@@ -4,18 +4,19 @@ homeConfig.headerMenuConfig = {
   logoText: './static/logos/资源 26@4x.png',
   menuLists: [
     {
-      path: "/neverx",
-      name: "GET STARTED",
+      isExternal: true,
+      path: "https://opendilab.github.io/DI-engine/index.html",
+      name: "Get Started",
     },
     {
       isExternal: true,
-      path: "https://www.baidu.com/",
-      name: "DOCUMENTS",
+      path: "https://opendilab.github.io/DI-engine/",
+      name: "Docs",
     },
     {
       path: "/dizoo",
       // id: "teachingVideo",
-      name: "DI-ZOO",
+      name: "DI-zoo",
       // isGoAnchor: true
     },
     {
@@ -25,7 +26,7 @@ homeConfig.headerMenuConfig = {
       children: [
         {
           path: "/diDrive",
-          name: "DI-dirve"
+          name: "DI-drive"
         },
         {
           path: "/diStar",
@@ -36,7 +37,7 @@ homeConfig.headerMenuConfig = {
     {
       path: "/community",
       id: "community",
-      name: "COMMUNITY",
+      name: "Community",
       isGoAnchor: true
     },
     // {
@@ -50,8 +51,8 @@ homeConfig.headerMenuConfig = {
 
 // Banner 
 homeConfig.bannerConfig = {
-  bannerText: "From research to production？", // 正常
-  bannerTextSmall: "NeverX is X-Lab Deep Reinforcement Learning Framework System，……", // 小号
+  bannerText: "Welcome to the Decision AI", // 正常
+  bannerTextSmall: "", // 小号
 }
 
 
@@ -60,24 +61,24 @@ homeConfig.coreAbilityConfig = {
   title: "KEY FEATURES",
   coreAbilityLists: [
     {
-      title: 'sss',
+      title: 'Algorithm Family',
       desc:
-        'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
+        'Various decision AI algorithm: DeepRL family, inverse RL family, MARL family, MCTS family and etc.',
     },
     {
-      title: 'sss',
+      title: 'Large Scale DRL',
       desc:
-        'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
+        '1000+CPU & 10000+GPU distributed self-play training system and several demostrations.',
     },
     {
-      title: 'sss',
+      title: 'Decision AI + System',
       desc:
-        'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
+        'Decision AI specific system designs, stable micro service support and high throughput efficiency optimization.',
     },
     {
-      title: 'sss',
+      title: 'Customized Design',
       desc:
-        'Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.',
+        'Unified various novel ideas and implementation forms. Prepare for Mix-AI era.'
     },
 
 
@@ -86,9 +87,10 @@ homeConfig.coreAbilityConfig = {
 
 // 安装
 homeConfig.installInfoConfig = {
-  title: 'INSTALL DI',
+  title: 'INSTALLATION',
+  desc: 'Select your preferences and run the install command. Please ensure that you have met the prerequisites below (e.g., PyTorch), depending on your package manager. Anaconda is our recommended package manager since it installs all dependencies. ',
   formConfig: [{
-      label: 'Version',
+      label: 'DI-engine Build',
       type: 'radioGroup',
       value: "",
       radioList: [
@@ -97,8 +99,8 @@ homeConfig.installInfoConfig = {
         //   value: '0.1'
         // },
         {
-          label: '0.2',
-          value: '0.2'
+          label: '0.1.0',
+          value: '0.1.0(beta)'
         },
         // {
         //   label: '0.3',
@@ -111,7 +113,7 @@ homeConfig.installInfoConfig = {
       ]
     },
     {
-      label: 'OS',
+      label: 'Your OS',
       type: 'radioGroup',
       radioList: [{
           label: 'Linux',
@@ -121,10 +123,10 @@ homeConfig.installInfoConfig = {
           label: 'Windows',
           value: 'Windows'
         },
-        // {
-        //   label: 'MacOS',
-        //   value: 'MacOS'
-        // }
+        {
+           label: 'Mac',
+           value: 'Mac'
+        }
       ]
     },
     {
@@ -135,51 +137,36 @@ homeConfig.installInfoConfig = {
           value: 'Pip'
         },
         {
+          label: 'Conda',
+          value: 'Conda'
+        },
+        {
           label: 'Source',
           value: 'Source'
         }
       ]
     },
     {
-      label: 'Run this Cmd',
+      label: 'Run this cmd:',
       type: 'cmd',
-      value: `git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd
-    nerveX source r0.3.2 pip install . --user pip install -e . --userf`
+      value: `Run this cmd:`
     }
   ],
   valueObj: {
-    radio0: '0.2',
+    radio0: '0.1.0',
     radio1: 'Linux',
     radio2: 'Pip'
   },
   cmdObj: {
-    "0.1LinuxPip": "git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd nerveX source r0.3.2 pip install . --user pip install -e . --userf",
-    "0.1LinuxSource": "0.1LinuxSource",
-    "0.1WindowsPip": "0.1WindowsPip",
-    "0.1WindowsSource": "0.1WindowsSource",
-    "0.1MacOSPip": "0.1MacOSPip",
-    "0.1MacOSSource": "0.1MacOSSource",
-
-    "0.2LinuxPip": "0.2LinuxPip",
-    "0.2LinuxSource": "0.2LinuxSource",
-    "0.2WindowsPip": "0.2WindowsPip",
-    "0.2WindowsSource": "0.2WindowsSource",
-    "0.2MacOSPip": "0.2MacOSPip",
-    "0.2MacOSSource": "0.2MacOSSource",
-
-    "0.3LinuxPip": "0.3LinuxPip",
-    "0.3LinuxSource": "0.3LinuxSource",
-    "0.3WindowsPip": "0.3WindowsPip",
-    "0.3WindowsSource": "0.3WindowsSource",
-    "0.3MacOSPip": "0.3MacOSPip",
-    "0.3MacOSSource": "0.3MacOSSource",
-
-    "0.4LinuxPip": "0.4LinuxPip",
-    "0.4LinuxSource": "0.4LinuxSource",
-    "0.4WindowsPip": "0.4WindowsPip",
-    "0.4WindowsSource": "0.4WindowsSource",
-    "0.4MacOSPip": "0.4MacOSPip",
-    "0.4MacOSSource": "0.4MacOSSource",
+    "0.1.0LinuxPip": "pip install DI-engine",
+    "0.1.0LinuxConda": "conda-c conda-forge install DI-engine",
+    "0.1.0LinuxSource": "git clone https://github.com/opendilab/DI-engine && cd DI-engine && pip install . --user",
+    "0.1.0WindowsPip": "pip install DI-engine",
+    "0.1.0WindowsConda": "conda-c conda-forge install DI-engine",
+    "0.1.0WindowsSource": "git clone https://github.com/opendilab/DI-engine && cd DI-engine && pip install . --user",
+    "0.1.0MacPip": "pip install DI-engine",
+    "0.1.0MacConda": "conda-c conda-forge install DI-engine", 
+    "0.1.0MacSource": "git clone https://github.com/opendilab/DI-engine && cd DI-engine && pip install . --user",
   },
 
 }
@@ -187,15 +174,15 @@ homeConfig.installInfoConfig = {
 
 // 场景案例 
 homeConfig.sceneCaseConfig = {
-  title: "Case",
+  title: "DI-X",
   caseLists: [
     {
-      imgUrl: './static/images/home/sceneCase/case_image_01.png',
-      desc: 'DI-star is'
+      imgUrl: './static/images/home/sceneCase/case_image_03.png',
+      desc: 'DI-Star is a large-scale distributed training framework based on OpenDILab. It is designed for training AI in extremely complex games like StarCraftII.'
     },
     {
-      imgUrl: './static/images/home/sceneCase/case_image_02.png',
-      desc: 'DI-dirve is'
+      imgUrl: './static/images/home/sceneCase/case_image_04.png',
+      desc: 'DI-drive is a Deep Learning platform for Autonomous Driving simulation. DI-drive develops driving policy with DI-engine and mainly uses Carla simulator.'
     }
   ],
 
@@ -255,16 +242,16 @@ homeConfig.communityConfig = {
     {
       title: 'Github',
       desc:
-        'OpenDIlab github',
-      link: 'https://www.baidu.com',
+        'DI-engine github',
+      link: 'https://github.com/opendilab/DI-engine',
       linkText: '查看详情',
       icon: ('./static/images/home/community/GitHub.svg')
     },
     {
       title: 'Zhihu',
       desc:
-        'OpenDIlab zhihu bbs',
-      link: 'https://www.baidu.com',
+        'OpenDILab zhihu',
+      link: 'http://www.zhihu.com/people/opendilab',
       linkText: '查看详情',
       icon: ('./static/images/home/community/zhihu.svg')
 
@@ -272,32 +259,13 @@ homeConfig.communityConfig = {
     {
       title: 'QQ Group',
       desc:
-        'OpenDIlab QQ group',
+        'OpenDILab QQ group',
       link: 'https://www.baidu.com',
       linkText: '查看详情',
       icon: ('./static/images/home/community/QQ.svg')
     }
   ]
 }
-
-// 教学视频 
-homeConfig.teachingVideoConfig = {
-  title: "教学视频",
-  teachingVideoLists: [
-    {
-      videoLink: 'https://www.baidu.com',
-    },
-    {
-
-      videoLink: 'https://map.baidu.com/@12688783,2562483,13z',
-    },
-    {
-      videoLink: 'https://www.baidu.com',
-    }
-  ]
-}
-
-
 // Footer 
 homeConfig.footerConfig = {
   footerInfoLists: [
@@ -305,12 +273,16 @@ homeConfig.footerConfig = {
       title: 'Resources',
       items: [
         {
-          itemTitle: 'Tutorials',
-          link: 'https://www.baidu.com/'
+          itemTitle: 'Quick Start',
+          link: 'https://opendilab.github.io/DI-engine/quick_start/index.html'
         },
         {
-          itemTitle: 'API docs',
-          link: 'https://www.baidu.com/'
+          itemTitle: 'Key Concept',
+          link: 'https://opendilab.github.io/DI-engine/key_concept/index.html'
+        },
+        {
+          itemTitle: 'Hands on RL',
+          link: 'https://opendilab.github.io/DI-engine/hands_on/index.html'
         },
         // {
         //   itemTitle: '示例项目',
@@ -319,19 +291,19 @@ homeConfig.footerConfig = {
       ]
     },
     {
-      title: 'Links',
+      title: 'Codebases',
       items: [
         {
           itemTitle: 'DI-drive',
-          link: 'https://www.baidu.com/'
+          link: 'https://github.com/opendilab/DI-drive'
         },
         {
           itemTitle: 'DI-star',
-          link: 'https://www.baidu.com/'
+          link: 'https://github.com/opendilab/DI-star'
         },
         {
           itemTitle: 'DI-zoo',
-          link: 'https://www.baidu.com/'
+          link: 'https://github.com/opendilab/DI-engine/tree/mastere/dizoo'
         }
       ]
     },
@@ -340,11 +312,11 @@ homeConfig.footerConfig = {
       items: [
         {
           itemTitle: 'Github',
-          link: 'https://www.baidu.com/'
+          link: 'https://github.com/opendilab'
         },
         {
           itemTitle: 'Email',
-          link: 'https://www.baidu.com/'
+          link: 'opendilab.contact@gmail.com'
         },
         // {
         //   itemTitle: '联系我们01',

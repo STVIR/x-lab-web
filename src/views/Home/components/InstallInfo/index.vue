@@ -100,6 +100,7 @@ export default {
   .title {
     text-align: left;
     font-size: 32px;
+    //font-family: 'lee';
   }
   .text {
     :deep(.el-form-item__content) {
@@ -109,16 +110,27 @@ export default {
     }
   }
   :deep(.el-form-item__content) {
-    line-height: 40px;
-    position: relative;
-    font-size: 14px;
+    line-height: 20px;
+    position: 100px;
+    font-size: 16px;
+    font-family: 'menlo';
     display: flex;
-    justify-content: flex-start;
+    //justify-content: flex-start;
+    padding: 20px, 10px;
+  }
+  :deep(.el-form-item__label) {
+    max-width:500px;
+    line-height: 30px;
+    font-size:15px;
+    font-family: 'menlo';
+    //display: flex;
+    //justify-content: flex-start;
   }
   .neverxInstallInfo-example {
     .title {
       font-size: 32px;
       font-weight: 600;
+    
     }
 
     .content {
@@ -126,8 +138,9 @@ export default {
       padding-left: 34px;
 
       .case-title {
-        font-size: 22px;
+        font-size: 32px;
         font-weight: 600;
+        font-family: 'menlo';
       }
       .case-content {
         line-height: 48px;
@@ -141,15 +154,15 @@ export default {
 
 <style lang="scss">
 .el-radio-button__orig-radio:checked+.el-radio-button__inner {
-    color:#1abc9c;
-    background-color: #243955;
-    border-color: #243955;
+    color:#ecf1f0;
+    background-color: #0a264e;
+    border-color: #072a55;
     -webkit-box-shadow: -1px 0 0 0 #409eff;
     box-shadow: -1px 0 0 0 #243955;
 }
   
 
   .el-radio-button__inner:hover {
-    color: #1abc9c;
+    color: #281785;
 }
 </style>

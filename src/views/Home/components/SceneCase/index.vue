@@ -74,13 +74,18 @@ export default {
           height: 286px;
         }
         .desc {
-          background-color: #f9f9f9;
-          height: 50px;
+          box-shadow: 0px 0px 10px 10px #f3f3f3;
+          background-color: #ffffff;
+          height: 80px;
           width: 100%;
           display: flex;
           align-items: center;
-          padding-left: 10px;
+          padding-left: 0px;
           box-sizing: border-box;
+          font-family: 'FreightSans';
+          margin-top: 10px;
+          max-width: 520px;
+          font-size: 18px;
         }
       }
     }

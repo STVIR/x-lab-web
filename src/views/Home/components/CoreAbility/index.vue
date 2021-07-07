@@ -50,28 +50,32 @@ export default {
   box-shadow: 0 4px 12px 0 #f3f3f3;
   // padding: 50px 64px;
   .coreAbility-title {
+    padding: 10px 30px;
     text-align: left;
     font-size: 32px;
   }
-
   .coreAbility-content {
     display: flex;
     flex-wrap: wrap;
+    padding: 10px 20px;
     .content-item {
-      width: 240px;
+      width: 290px;
       text-align: left;
-      padding: 0px 20px;
+      padding: 10px 10px;
       margin-bottom: 30px;
+      margin-right: 9px;
       .item-title {
+        font-family: 'FreightSans';
+        font-weight: 550;
         font-size: 24px;
-        text-align: center;
-        width: 240px;
+        text-align: left;
+        width: 290px;
       }
       .item-content {
-        font-family: 'ArialMT', 'Arial', sans-serif;
+        font-family: 'FreightSans';
         font-weight: 400;
         font-style: normal;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5;
       }
     }

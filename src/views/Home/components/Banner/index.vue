@@ -2,15 +2,20 @@
   <div class="banner">
     <div class="left">
       <span class="banner-text">
-        {{ bannerText }}
+        Welcome to the
+        <br>
+        Decision Intelligence
       </span>
       <span class="banner-text small">
-        {{ bannerTextSmall }}
+        An open source decision intelligence engine that generalizes and accelerates
+        <br>
+         various environments, algorithms and computation pipelines.
+ 
       </span>
     </div>
     <div class="right">
       <div class="btns" @click="goStart">
-        GET STARTED
+         &nbsp; Install &nbsp;
       </div>
     </div>
   </div>
@@ -30,7 +35,7 @@ export default {
   methods: {
     goStart() {
       this.$router.push({
-        path: '/neverx'
+        path: 'https://opendilab.github.io/DI-engine/installation/index.html'
       })
     }
   }
@@ -44,15 +49,15 @@ export default {
   background-repeat: repeat-x;
   background-attachment: scroll;
   width: 100%;
-  height: 328px;
-  background-image: url('../../../../../static/banners/bannerHome.png');
+  height: 400px;
+  background-image: url('../../../../../static/banners/bannerHome_02.png');
   // background-position: right bottom;
   background-repeat: repeat-x;
   background-attachment: scroll;
   // background-size: 4660px 462px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 80px;
+  padding: 10px 180px;
   box-sizing: border-box;
   .left {
     display: flex;
@@ -61,16 +66,20 @@ export default {
     align-items: flex-start;
     height: 100%;
     .banner-text {
-      font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC',
-        sans-serif;
-      font-weight: 650;
+      margin-top: 60px;
+      font-family: 'Helvetica Neue';
+      font-weight: 350;
       font-style: normal;
-      font-size: 48px;
+      font-size: 60px;
+      text-align: left;
       color: #ffffff;
       &.small {
+        font-family: 'FreightSans';
+        font-weight: 450;
         font-size: 18px;
         margin-top: 86px;
         text-align: left;
+        line-height: 30px;
       }
     }
   }
@@ -78,7 +87,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 
     .btns {
       display: inline-block;
@@ -86,6 +95,7 @@ export default {
       padding: 8px;
       border-radius:2px ;
       cursor: pointer;
+      font-family: 'FreightSans';
     }
   }
 }

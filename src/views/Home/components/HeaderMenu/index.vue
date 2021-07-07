@@ -55,7 +55,7 @@
             </div>
           </el-menu>
           <div class="link">
-            <a href="https://github.com/opendilab/DI-engine" target="_blank">GitHub</a>
+            <a href="https://github.com/opendilab/DI-engine" target="_blank">Github</a>
           </div>
         </div>
       </el-col>
@@ -146,7 +146,7 @@ export default {
   width: 100%;
   // justify-content: center;
   background-color: #4b82c7;
-  height: 60px;
+  height: 80px;
 
   .logo {
     img {

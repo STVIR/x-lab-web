@@ -36,7 +36,10 @@
         <div class="source-item">示例项目</div>
       </div>
       <div class="footer-contact"></div> -->
+
         </div>
+
+        
         <div class="footer-right footer-qrcode">
           <img
             v-for="(qrcode, qrcodeIndex) in qrcodeLists"
@@ -47,7 +50,18 @@
         </div>
 
         <p class="copyright">
-          Copyright © OpenDILad 2021. All Rights Reserved.
+          Copyright © OpenDILab 2021. All Rights Reserved.
+        </p>      
+
+        <p class="qq-group-decs">
+          OpenDILab community
+          <br>
+        (QQ group: 700157520)
+</p>
+        <p class="tx-official-decs">
+          OpenDILab AI
+          <br>
+        Official Accounts
         </p>
       </el-col>
     </el-row>
@@ -80,6 +94,8 @@ export default {
     justify-content: space-between;
   }
   .footer-left {
+    font-family: 'FreightSans';
+    margin-left: 20px;
     display: flex;
     color: #fff;
     .footer-info-title {
@@ -98,6 +114,7 @@ export default {
             line-height: 40px;
             font-weight: 650;
             color: #fff;
+            font-size:18px;
           }
         }
       }
@@ -113,12 +130,35 @@ export default {
       img {
         width: 160px;
         height: 160px;
-        margin-left: 30px;
+        margin-left:90px;
       }
     }
   }
 
-  .copyright {
+  .qq-group-decs {
+    width: 100%;
+    font-family: 'FreightSans';
+    margin-left:310px;
+    margin-bottom:40px;
+    color: #fff;
+    position: absolute;
+    text-align: middle;
+    bottom: -50px;
+    font-size: 13px;
+  }
+  .tx-official-decs {
+    width: 100%;
+    font-family: 'FreightSans';
+    margin-left:560px;
+    margin-bottom:40px;
+    color: #fff;
+    position: absolute;
+    text-align: middle;
+    bottom: -50px;
+    font-size: 13px;
+  }
+
+.copyright {
     width: 100%;
     color: #fff;
     position: absolute;
@@ -126,5 +166,6 @@ export default {
     bottom: -50px;
     font-size: 13px;
   }
+
 }
 </style>
