@@ -2,6 +2,10 @@
 const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 
 module.exports = {
@@ -20,6 +24,11 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    },
     plugins: [
       new CopyPlugin({
         patterns: [

@@ -8,22 +8,22 @@ const routes = [
   },
 
   {
-    path: '/xad',
-    name: 'Xad',
+    path: '/diDrive',
+    name: 'DiDrive',
     // route level code-splitting
     // this generates a separate chunk (xad.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "xad" */ '../views/Xad/index.vue')
+    component: () => import(/* webpackChunkName: "diDrive" */ '../views/DiDrive/index.vue')
   },
   {
-    path: '/ss',
-    name: 'Ss',
-    component: () => import(/* webpackChunkName: "ss" */ '../views/Ss/index.vue')
+    path: '/diStar',
+    name: 'DiStar',
+    component: () => import(/* webpackChunkName: "diStar" */ '../views/DiStar/index.vue')
   },
   {
-    path: '/neverx',
-    name: 'Neverx',
-    component: () => import(/* webpackChunkName: "neverx" */ '../views/Neverx/index.vue')
+    path: '/dizoo',
+    name: 'Dizoo',
+    component: () => import(/* webpackChunkName: "dizoo" */ '../views/Dizoo/index.vue')
   }
 ]
 

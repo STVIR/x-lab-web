@@ -131,19 +131,6 @@ export default {
   height: 60px;
 
   .logo {
-    // background-color: #243955;
-    // height: 60px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // width: 130px;
-    // color: #fff;
-    // font-weight: 650;
-    // font-style: normal;
-    // font-size: 28px;
-    // width: 166px;
-    // width: 178px;
-    // height: 85px;
     img {
       // width: 178px;
       height: 60px;

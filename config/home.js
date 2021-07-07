@@ -13,22 +13,22 @@ homeConfig.headerMenuConfig = {
       name: "DOCUMENTS",
     },
     {
-      path: "/teachingVideo",
-      id: "teachingVideo",
+      path: "/dizoo",
+      // id: "teachingVideo",
       name: "DI-ZOO",
-      isGoAnchor: true
+      // isGoAnchor: true
     },
     {
       path: "/case",
       name: "DI-X",
-      redirect: "/case/xad",
+      redirect: "/case/diDrive",
       children: [
         {
-          path: "/xad",
+          path: "/diDrive",
           name: "DI-dirve"
         },
         {
-          path: "/ss",
+          path: "/diStar",
           name: "DI-star"
         },
       ]
@@ -86,7 +86,7 @@ homeConfig.coreAbilityConfig = {
 
 // 安装
 homeConfig.installInfoConfig = {
-  title: '安装',
+  title: 'INSTALL DI',
   formConfig: [{
       label: 'Version',
       type: 'radioGroup',
