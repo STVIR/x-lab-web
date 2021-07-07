@@ -5,8 +5,8 @@
         :xs="{ span: 24 }"
         :sm="{ span: 24 }"
         :md="{ span: 24 }"
-        :lg="{ span: 21 }"
-        :xl="{ span: 21 }"
+        :lg="{ span: 20 }"
+        :xl="{ span: 20 }"
       >
         <h1 class="community-title">
           {{ title }}
@@ -66,9 +66,9 @@ export default {
   .community-content {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
+    justify-content: space-between;
     .content-item {
-      width: 368px;
+      width: 340px;
       height: 200px;
       background: #f9f9f9;
       

@@ -34,14 +34,14 @@ export default {
     return {
       title: window.homeConfig.coreAbilityConfig.title,
       coreAbilityLists: window.homeConfig.coreAbilityConfig.coreAbilityLists
-    }
+    };
   },
   methods: {
     onSubmit() {
-      console.log('submit!')
+      console.log('submit!');
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,6 +64,8 @@ export default {
       margin-bottom: 30px;
       .item-title {
         font-size: 24px;
+        text-align: center;
+        width: 240px;
       }
       .item-content {
         font-family: 'ArialMT', 'Arial', sans-serif;
@@ -77,8 +79,8 @@ export default {
 }
 
 @media only screen and (max-width: 1380px) {
-  .content-item{
-   padding: 0px 18px !important;
+  .content-item {
+    padding: 0px 18px !important;
   }
 }
 </style>

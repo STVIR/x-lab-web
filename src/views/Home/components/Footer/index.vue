@@ -5,8 +5,8 @@
         :xs="{ span: 24 }"
         :sm="{ span: 24 }"
         :md="{ span: 24 }"
-        :lg="{ span: 21 }"
-        :xl="{ span: 21 }"
+        :lg="{ span: 20 }"
+        :xl="{ span: 20 }"
         class="row"
       >
         <div class="footer-left footer-info">
@@ -45,6 +45,10 @@
             alt=""
           />
         </div>
+
+        <p class="copyright">
+          Copyright © OpenDILad 2021. All Rights Reserved.
+        </p>
       </el-col>
     </el-row>
   </div>
@@ -112,6 +116,15 @@ export default {
         margin-left: 30px;
       }
     }
+  }
+
+  .copyright {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    text-align: left;
+    bottom: -50px;
+    font-size: 13px;
   }
 }
 </style>

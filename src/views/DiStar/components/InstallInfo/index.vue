@@ -1,54 +1,68 @@
 <template>
-  <div id="installInfo" class="InstallInfo">
+  <div id="diStarInstallInfo" class="diStarInstallInfo section-wraper">
     <el-row type="flex" justify="center">
       <el-col
         :xs="{ span: 24 }"
         :sm="{ span: 24 }"
         :md="{ span: 24 }"
-        :lg="{ span: 20 }"
-        :xl="{ span: 20 }"
+        :lg="{ span: 21 }"
+        :xl="{ span: 21 }"
       >
-
         <h3 class="title">
           {{ title }}
         </h3>
-        <el-form ref="form" :model="form" label-position="left" label-width="150px">
-          <div v-for="(formItem, formItemIndex) in formConfig" :key="formItemIndex">
-            <el-form-item
-              v-if="formItem.type === 'radioGroup'"
-              :label="formItem.label"
-            >
-              <el-radio-group v-model="valueObj[`radio${formItemIndex}`]">
-                <el-radio-button
-                  v-for="(radio, radioIndex) in formItem.radioList"
-                  :key="radioIndex"
-                  :label="radio.label"
-                >{{ radio.value }}</el-radio-button>
-              </el-radio-group>
-            </el-form-item>
-            <el-form-item
-              v-else-if="formItem.type === 'cmd'"
-              class="text"
-              :label="formItem.label"
-            >
-              {{ formatString(valueObj) }}
-            </el-form-item>
+        <div class="requirements installInfoItem">
+          <h5 class="title">
+            Requirements
+          </h5>
+          <div class="content">
+            <p>
+              DI-star can run with <strong>Ubuntu 16.04, 18.04</strong> or
+              <strong>Windows 10, GPU</strong> is necessary
+            </p>
+            <p>
+              DI-star requires <strong>DI-engine, StarCraftII</strong> and
+              <strong>Pytorch </strong> to run.
+            </p>
           </div>
-        </el-form>
+        </div>
+
+        <div class="soureCode  installInfoItem ">
+          <h5 class="title">
+            Install DI-dirve from soure code
+          </h5>
+          <div class="content">
+            <div class="code">
+              <p>
+                git clone git@github.com:opendilab/DI-star.git
+              </p>
+              <p>
+                cd DI-star
+              </p>
+              <p>
+                pip install —user .
+              </p>
+            </div>
+            <p>
+              Follow <strong>Installation guide </strong>of details about
+              installation
+            </p>
+          </div>
+        </div>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       title: window.xadConfig.installInfoConfig.title,
-      formConfig: window.xadConfig.installInfoConfig.formConfig,
-      cmdObj: window.xadConfig.installInfoConfig.cmdObj,
-      valueObj: window.xadConfig.installInfoConfig.valueObj,
+      formConfig: window.ssConfig.installInfoConfig.formConfig,
+      cmdObj: window.ssConfig.installInfoConfig.cmdObj,
+      valueObj: window.ssConfig.installInfoConfig.valueObj,
+      exampleInfo: window.ssConfig.installInfoConfig.exampleInfo,
       form: {
         name: '',
         region: '',
@@ -62,34 +76,63 @@ export default {
       radio1: '上海',
       radio2: '上海',
       radio3: '上海'
-    }
+    };
   },
   methods: {
     onSubmit() {
-      console.log('submit!')
+      console.log('submit!');
     },
     formatString(obj) {
-      let tem = Object.values(obj)
-      tem = tem.toString().replaceAll(',', '')
+      let tem = Object.values(obj);
+      tem = tem.toString().replaceAll(',', '');
 
-      return this.cmdObj[tem] || ''
+      return this.cmdObj[tem] || '';
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.InstallInfo {
+.diStarInstallInfo {
   box-shadow: 0 2px 12px 0 #dddddd;
   padding: 50px 64px;
   .title {
     text-align: left;
   }
+
+  .installInfoItem {
+    margin-bottom: 20px;
+    .title {
+      font-size: 24px;
+      padding-left: 40px;
+      margin: 0;
+    }
+    .content {
+      text-align: left;
+      padding-left: 60px;
+    }
+
+    &.soureCode {
+      .code {
+        background: #f2f2f2;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+    &.guidance {
+      .code {
+        background: #f2f2f2;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  }
+
   .text {
     :deep(.el-form-item__content) {
       background: #f2f2f2;
       padding: 10px;
-       text-align: left;
+      text-align: left;
     }
   }
   :deep(.el-form-item__content) {
@@ -98,6 +141,26 @@ export default {
     font-size: 14px;
     display: flex;
     justify-content: flex-start;
+  }
+  .ssInstallInfo-example {
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .content {
+      text-align: left;
+      padding-left: 34px;
+
+      .case-title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .case-content {
+        line-height: 48px;
+        text-indent: 20px;
+      }
+    }
   }
 }
 </style>

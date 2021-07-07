@@ -40,12 +40,12 @@ export default {
 <style lang="scss" scoped>
 .banner {
   background-color: rgba(2, 167, 240, 1);
-  background-position: right bottom;
+  // background-position: right bottom;
   background-repeat: repeat-x;
   background-attachment: scroll;
   width: 100%;
   height: 328px;
-  background-image: url('../../../../../static/images/bannerBg.png');
+  background-image: url('../../../../../static/banners/bannerHome.png');
   // background-position: right bottom;
   background-repeat: repeat-x;
   background-attachment: scroll;

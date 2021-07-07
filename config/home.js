@@ -1,7 +1,7 @@
 var homeConfig = {}
 // HeaderMenu 
 homeConfig.headerMenuConfig = {
-  logoText: './static/images/home/logo.png',
+  logoText: './static/logos/资源 26@4x.png',
   menuLists: [
     {
       path: "/neverx",

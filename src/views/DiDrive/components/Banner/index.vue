@@ -28,7 +28,8 @@ export default {
   background-attachment: scroll;
   width: 100%;
   height: 328px;
-  background-image: url("../../../../../static/images/ss/banner.png");
+   background-image: url('../../../../../static/banners/bannerDrive.png');
+
   background-position: right bottom;
   background-repeat: repeat-x;
   background-attachment: scroll;

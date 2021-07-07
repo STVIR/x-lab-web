@@ -1,97 +1,120 @@
 <template>
-  <div class="HeaderMenu-wraper">
-    <div class="log">{{ logoText }}</div>
-    <el-menu
-      :default-active="activeIndex"
-      class="menu-wraper"
-      mode="horizontal"
-      background-color="#0079fe"
-      text-color="#CCCCCC"
-      active-text-color="#fff"
-      @select="handleSelect"
-    >
-      <div
-        v-for="(item, index) in menuLists"
-        :key="item.path"
-        class="menu-item"
+  <div class="HeaderMenu-wraper" ref="header">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 24 }"
+        :xl="{ span: 18 }"
       >
-        <el-menu-item v-if="!item.children" :index="String(index + 1)">
-          <a
-            v-if="item.isExternal"
-            :href="item.path"
-            class="item-content"
-            target="_blank"
-          >{{ item.name }}</a>
-          <span v-else class="item-content" @click="handleClickMenu(item)">{{ item.name }}</span>
-        </el-menu-item>
-        <el-submenu v-else :index="String(index + 1)">
-          <template #title>{{ item.name }}</template>
-          <el-menu-item
-            v-for="(child, childIndex) in item.children"
-            :key="child.path"
-            :index="`${index + 1}-${childIndex + 1}`"
-          >{{ child.name }}</el-menu-item>
-        </el-submenu>
-      </div>
-    </el-menu>
+        <div class="HeaderMenu-container">
+          <div class="logo">
+            <img :src="logoText" alt="" />
+          </div>
+          <el-menu
+            :default-active="activeIndex"
+            class="menu-wraper"
+            mode="horizontal"
+            background-color="#0382fd"
+            text-color="#CCCCCC"
+            active-text-color="#fff"
+            @select="handleSelect"
+          >
+            <div
+              v-for="(item, index) in menuLists"
+              :key="item.path"
+              class="menu-item"
+            >
+              <el-menu-item v-if="!item.children" :index="String(index + 1)">
+                <a
+                  v-if="item.isExternal"
+                  :href="item.path"
+                  class="item-content"
+                  target="_blank"
+                  >{{ item.name }}</a
+                >
+                <span
+                  v-else
+                  class="item-content"
+                  @click="handleClickMenu(item)"
+                  >{{ item.name }}</span
+                >
+              </el-menu-item>
+              <el-submenu v-else :index="String(index + 1)">
+                <template #title>{{ item.name }}</template>
+                <el-menu-item
+                  v-for="(child, childIndex) in item.children"
+                  :key="child.path"
+                  :index="`${index + 1}-${childIndex + 1}`"
+                  >{{ child.name }}</el-menu-item
+                >
+              </el-submenu>
+            </div>
+          </el-menu>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import { isExternal } from '@/utils/validate'
+import { isExternal } from '@/utils/validate';
+import scrollTop from '../../../mixins/scrollTop.js';
 
 export default {
   name: 'Home',
+  mixins: [scrollTop],
 
   data() {
     return {
       activeIndex: '',
       logoText: window.xadConfig.headerMenuConfig.logoText,
       menuLists: window.xadConfig.headerMenuConfig.menuLists
-    }
+    };
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+      console.log(key, keyPath);
     },
     handleClickMenu(item) {
       if (item.isGoAnchor) {
-        this.handleAnchor(item.id)
+        this.handleAnchor(item.id);
       }
     },
     activeMenu() {
-      const route = this.$route
-      console.log('route', this.$route)
-      const { meta, path } = route
+      const route = this.$route;
+      console.log('route', this.$route);
+      const { meta, path } = route;
       // if set path, the sidebar will highlight the path you set
       if (meta.activeMenu) {
-        return meta.activeMenu
+        return meta.activeMenu;
       }
-      return path
+      return path;
     },
     hasOneShowingChild(children = [], parent) {
       // When there is only one child router, the child router is displayed by default
       if (children.length === 1) {
-        return true
+        return true;
       }
 
       // Show parent if there are no child router to display
       if (children.length === 0) {
-        return true
+        return true;
       }
 
-      return false
+      return false;
     },
     resolvePath(routePath) {
-      console.log('routePath', routePath)
+      console.log('routePath', routePath);
       if (isExternal(routePath)) {
-        return routePath
+        return routePath;
       }
       // if (isExternal(this.basePath)) {
       //   return this.basePath;
       // }
       // return path.resolve(this.basePath, routePath);
-      return routePath
+      return routePath;
     },
     // 滚动锚点
     handleAnchor(id) {
@@ -99,28 +122,28 @@ export default {
       //   block: "center",
       //   behavior: "smooth"
       // }
-      document.querySelector(`#${id}`).scrollIntoView()
+      document.querySelector(`#${id}`).scrollIntoView();
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.HeaderMenu-wraper {
+.HeaderMenu-wraper1 {
   display: flex;
   width: 100%;
   .log {
-    background-color: #0079fe;
+    // background-color: #0382fd;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 130px;
     color: #fff;
-  font-weight: 650;
+    font-weight: 650;
     font-style: normal;
     font-size: 28px;
-        width: 166px;
+    width: 166px;
   }
   .el-menu.el-menu--horizontal {
     border-bottom: none;
@@ -146,7 +169,7 @@ export default {
       .item-content {
         padding: 0 40px;
         display: inline-block;
-         font-weight: 650;
+        font-weight: 650;
         font-style: normal;
         font-size: 16px;
         color: #cccccc;

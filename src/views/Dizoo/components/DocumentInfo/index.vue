@@ -77,6 +77,10 @@
                {{algorithmOverview.html}}
             </code>
           </pre> -->
+          <h5>
+            Atari Benchmark
+          </h5>
+          <p>DQN</p>
           <el-table
             class="content"
             :data="tableData"
@@ -85,6 +89,224 @@
           >
             <el-table-column
               v-for="(col, index) in column"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>C51</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>QRDQN</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>IQN</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>Rainbow</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>A2C</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>PPO</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <h5>
+            Mujoco Benchmark
+          </h5>
+
+          <p>DDPG</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+
+          <p>TD3</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+
+          <p>SAC</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>PPO</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+
+          <h5>
+            SMAC Benchmark
+          </h5>
+          <p>QMIX</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>CollaQ</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
+              :key="index"
+              :prop="col.prop"
+              :label="col.label"
+              :width="col.width"
+            >
+            </el-table-column>
+          </el-table>
+          <p>COMA</p>
+          <el-table
+            class="content"
+            :data="tableDataC51"
+            border
+            style="width: 100%"
+          >
+            <el-table-column
+              v-for="(col, index) in columnC51"
               :key="index"
               :prop="col.prop"
               :label="col.label"
@@ -176,7 +398,8 @@ export default {
               desc: 'Qmix'
             },
             {
-              link: 'https://opendilab.github.io/DI-engine/hands_on/collaq.html',
+              link:
+                'https://opendilab.github.io/DI-engine/hands_on/collaq.html',
               desc: 'Colla-q'
             },
             {
@@ -221,6 +444,128 @@ export default {
       ],
 
       tableData: [
+        {
+          Type: 'Pong',
+          EnvSteps: '10M',
+          Ours: '20',
+          Tianshou: '20',
+          Rllib: 'n/a',
+          Sb3: '20'
+        },
+        {
+          Type: 'Qbert',
+          EnvSteps: '10M',
+          Ours: '17866',
+          Tianshou: '7307',
+          Rllib: '7968',
+          Sb3: '9496'
+        },
+        {
+          Type: 'Space Invaders',
+          EnvSteps: '10M',
+          Ours: '1880',
+          Tianshou: '812',
+          Rllib: '1001',
+          Sb3: '622'
+        }
+      ],
+
+      // C51
+      columnC51: [
+        {
+          prop: 'Type',
+          label: '',
+          width: 'auto'
+        },
+        {
+          prop: 'EnvSteps',
+          label: ' Env Steps',
+          width: 'auto'
+        },
+        {
+          prop: 'Ours',
+          label: 'Ours',
+          width: 'auto'
+        },
+        {
+          prop: 'Tianshou',
+          label: 'Tianshou',
+          width: 'auto'
+        },
+        {
+          prop: 'Rllib',
+          label: 'Rllib',
+          width: 'auto'
+        },
+        {
+          prop: 'Sb3',
+          label: 'Sb3',
+          width: 'auto'
+        }
+      ],
+
+      tableDataC51: [
+        {
+          Type: 'Pong',
+          EnvSteps: '10M',
+          Ours: '20',
+          Tianshou: '20',
+          Rllib: '20',
+          Sb3: 'n/a'
+        },
+        {
+          Type: 'Qbert',
+          EnvSteps: '10M',
+          Ours: '19034',
+          Tianshou: '16245',
+          Rllib: '15780',
+          Sb3: 'n/a'
+        },
+        {
+          Type: 'Space Invaders',
+          EnvSteps: '10M',
+          Ours: '2396',
+          Tianshou: '989',
+          Rllib: '1025',
+          Sb3: 'n/a'
+        }
+      ],
+
+      // DQN
+      columnDQN: [
+        {
+          prop: 'Type',
+          label: '',
+          width: 'auto'
+        },
+        {
+          prop: 'EnvSteps',
+          label: ' Env Steps',
+          width: 'auto'
+        },
+        {
+          prop: 'Ours',
+          label: 'Ours',
+          width: 'auto'
+        },
+        {
+          prop: 'Tianshou',
+          label: 'Tianshou',
+          width: 'auto'
+        },
+        {
+          prop: 'Rllib',
+          label: 'Rllib',
+          width: 'auto'
+        },
+        {
+          prop: 'Sb3',
+          label: 'Sb3',
+          width: 'auto'
+        }
+      ],
+
+      tableDataDQN: [
         {
           Type: 'Pong',
           EnvSteps: '10M',

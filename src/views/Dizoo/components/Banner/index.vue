@@ -56,7 +56,7 @@ export default {
   background-repeat: repeat-x;
   background-attachment: scroll;
   width: 100%;
-  background-image: url("../../../../../static/images/diZoo/banner.png");
+   background-image: url('../../../../../static/banners/bannerZoo.png');
   background-repeat: repeat-x;
   background-attachment: scroll;
   .title {

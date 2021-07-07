@@ -2,30 +2,31 @@ var ssConfig = {}
 
 // HeaderMenu 
 ssConfig.headerMenuConfig = {
-  logoText: 'ss',
+  logoText: './static/logos/资源 23@4x.png',
+
   menuLists: [
     {
       path: "/ssInstallInfo",
-      name: "安装",
+      name: "INSTALLATION",
       id: "ssInstallInfo",
       isGoAnchor: true
     },
     {
       path: "/ssDocumentInfo",
-      name: "文档",
+      name: "DOCUMENTS",
       id: "ssDocumentInfo",
       isGoAnchor: true
     },
     {
       path: "/ssDataInfo",
-      name: "数据",
+      name: "CASEZOO",
       id: "ssDataInfo",
       isGoAnchor: true
     },
 
     {
       id: "ssSourceCode",
-      name: "源码",
+      name: "SOURCE",
       isExternal: true,
       path: "https://www.baidu.com/",
     },
@@ -227,9 +228,9 @@ ssConfig.exampleConfig = {
 }
 
 // CaseZoo
-ssConfig.exampleConfig = {
-  title:"EXAMPLE",
-  imgUrl: "./static/images/ss/introduce/example.png"
+ssConfig.caseZooConfig = {
+  title:"CASEZOO",
+  imgUrl: "./static/images/ss/introduce/casezoo.png"
 
 }
 

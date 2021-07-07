@@ -1,9 +1,18 @@
 <template>
-  <div class="HeaderMenu-wraper">
-    <div class="logo">
-      <img :src="logoText" alt="" />
-    </div>
-    <!-- <el-menu
+  <div class="HeaderMenu-wraper"  ref="header">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 24 }"
+        :xl="{ span: 18 }"
+      >
+        <div class="HeaderMenu-container">
+          <div class="logo">
+            <img :src="logoText" alt="" />
+          </div>
+          <!-- <el-menu
      :default-active="activeIndex"
       class="menu-wraper"
       mode="horizontal"
@@ -40,14 +49,23 @@
         </el-submenu>
       </div>
     </el-menu> -->
+
+     <!-- <div class="link">
+            <a href="https://github.com/opendilab/DI-drive" target="_blank">GitHub</a>
+          </div> -->
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import { isExternal } from '@/utils/validate';
+import scrollTop from '../../../mixins/scrollTop.js';
 
 export default {
   name: 'Home',
+  mixins: [scrollTop],
 
   data() {
     return {
@@ -112,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.HeaderMenu-wraper {
+.HeaderMenu-wraper1 {
   display: flex;
   width: 100%;
   background-color: #243955;

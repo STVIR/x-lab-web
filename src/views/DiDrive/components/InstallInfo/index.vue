@@ -26,7 +26,7 @@
             </p>
           </div>
         </div>
-      
+
         <!-- </div> -->
         <div class="soureCode  installInfoItem ">
           <h5 class="title">
@@ -47,8 +47,7 @@
           </div>
         </div>
 
-
-          <div class="guidance  installInfoItem ">
+        <div class="guidance  installInfoItem ">
           <h5 class="title">
             Guidance
           </h5>
@@ -116,6 +115,7 @@ export default {
   }
 
   .installInfoItem {
+    margin-bottom: 20px;
     .title {
       font-size: 24px;
       padding-left: 40px;

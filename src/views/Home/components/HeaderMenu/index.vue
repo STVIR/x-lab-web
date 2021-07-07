@@ -1,56 +1,75 @@
 <template>
-  <div class="HeaderMenu-wraper">
-    <div class="logo">
-      <img :src="logoText" alt="" />
-    </div>
-    <el-menu
-      :default-active="activeIndex"
-      class="menu-wraper"
-      mode="horizontal"
-      background-color="#243955"
-      text-color="#CCCCCC"
-      active-text-color="#fff"
-      @select="handleSelect"
-    >
-      <div
-        v-for="(item, index) in menuLists"
-        :key="item.path"
-        class="menu-item"
+  <div class="HeaderMenu-wraper" ref="header">
+    <el-row type="flex" justify="center">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 24 }"
+        :lg="{ span: 24 }"
+        :xl="{ span: 18 }"
       >
-        <el-menu-item v-if="!item.children" :index="String(index + 1)">
-          <a
-            v-if="item.isExternal"
-            :href="item.path"
-            class="item-content"
-            target="_blank"
-            >{{ item.name }}</a
+        <div class="HeaderMenu-container">
+          <div class="logo">
+            <img :src="logoText" alt="" />
+          </div>
+          <el-menu
+            :default-active="activeIndex"
+            class="menu-wraper"
+            mode="horizontal"
+            background-color="#0382fd"
+            text-color="#CCCCCC"
+            active-text-color="#fff"
+            @select="handleSelect"
           >
-          <!-- <a class="link" v-if="item.isExternal" href="https://www.ele.me" target="_blank">订单管理</a> -->
-          <span v-else class="item-content" @click="handleClickMenu(item)">{{
-            item.name
-          }}</span>
-        </el-menu-item>
-        <el-submenu v-else :index="String(index + 1)">
-          <template #title>{{ item.name }}</template>
-          <el-menu-item
-            v-for="(child, childIndex) in item.children"
-            :key="child.path"
-            :index="`${index + 1}-${childIndex + 1}`"
-            @click="handleClickMenu(child)"
-            >{{ child.name }}</el-menu-item
-          >
-        </el-submenu>
-      </div>
-    </el-menu>
+            <div
+              v-for="(item, index) in menuLists"
+              :key="item.path"
+              class="menu-item"
+            >
+              <el-menu-item v-if="!item.children" :index="String(index + 1)">
+                <a
+                  v-if="item.isExternal"
+                  :href="item.path"
+                  class="item-content"
+                  target="_blank"
+                  >{{ item.name }}</a
+                >
+                <!-- <a class="link" v-if="item.isExternal" href="https://www.ele.me" target="_blank">订单管理</a> -->
+                <span
+                  v-else
+                  class="item-content"
+                  @click="handleClickMenu(item)"
+                  >{{ item.name }}</span
+                >
+              </el-menu-item>
+              <el-submenu v-else :index="String(index + 1)">
+                <template #title>{{ item.name }}</template>
+                <el-menu-item
+                  v-for="(child, childIndex) in item.children"
+                  :key="child.path"
+                  :index="`${index + 1}-${childIndex + 1}`"
+                  @click.capture="handleClickMenu(child)"
+                  >{{ child.name }}</el-menu-item
+                >
+              </el-submenu>
+            </div>
+          </el-menu>
+          <div class="link">
+            <a href="https://github.com/opendilab/DI-engine" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import { isExternal } from '@/utils/validate';
+import scrollTop from '../../../mixins/scrollTop.js';
 
 export default {
   name: 'Home',
-
+  mixins: [scrollTop],
   data() {
     return {
       activeIndex: '',
@@ -61,7 +80,6 @@ export default {
 
   mounted() {
     console.log('window.config', window.homeConfig);
-    // this.logoText= window.home.headerMenuConfig.logoText
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -123,11 +141,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.HeaderMenu-wraper {
+.HeaderMenu-wraper1 {
   display: flex;
   width: 100%;
   // justify-content: center;
-  background-color: #243955;
+  background-color: #4b82c7;
   height: 60px;
 
   .logo {
@@ -181,6 +199,12 @@ export default {
         line-height: 60px;
         border-bottom-color: initial !important;
         border-bottom: 0px;
+        // padding: 0 40px;
+        // display: inline-block;
+        font-weight: 650;
+        // font-style: normal;
+        // font-size: 16px;
+        color: #cccccc;
       }
       &.is-active {
         :deep(.el-submenu__title) {
@@ -199,6 +223,12 @@ export default {
   &.is-light {
     background: transparent !important;
     border: none !important;
+  }
+}
+
+.el-menu--horizontal {
+  .el-menu-item {
+    font-weight: 650;
   }
 }
 </style>

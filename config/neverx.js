@@ -2,7 +2,7 @@ var neverxConfig = {}
 // Dizoo
 // HeaderMenu   
 neverxConfig.headerMenuConfig = {
-  logoText: './static/images/home/logo.png',
+  logoText: './static/logos/资源 24@4x.png',
   menuLists: [{
     path: "/neverxInstallInfo",
     name: "安装",

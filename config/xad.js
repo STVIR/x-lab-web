@@ -1,39 +1,39 @@
-var xadConfig={}
+var xadConfig = {}
 // HeaderMenu 
- xadConfig.headerMenuConfig = {
-  logoText: 'XAD',
+xadConfig.headerMenuConfig = {
+  logoText: './static/logos/资源 22@4x.png',
   menuLists: [
     {
       path: "/installInfo",
-      name: "安装",
+      name: "INSTALLATION",
       id: "installInfo",
       isGoAnchor: true
     },
     {
       path: "/documentInfo",
-      name: "文档",
+      name: "DOCUMENTS",
       id: "documentInfo",
       isGoAnchor: true
     },
     {
       path: "/dataInfo",
-      name: "数据",
+      name: "EXAMPLE",
       id: "dataInfo",
       isGoAnchor: true
     },
 
     {
       id: "sourceCode",
-      name: "源码",
-      isExternal:true,
+      name: "SOURCE",
+      isExternal: true,
       path: "https://www.baidu.com/",
     },
 
   ]
 }
 
-// 安装
- xadConfig.installInfoConfig = {
+// 安装old
+xadConfig.installInfoConfig1 = {
   title: '安装',
 
   formConfig: [
@@ -98,50 +98,79 @@ var xadConfig={}
     nerveX source r0.3.2 pip install . --user pip install -e . --userf`
     }
   ],
-  valueObj: { 
+  valueObj: {
     radio0: '0.1',
     radio1: 'Linux',
     radio2: 'Pip'
   },
-  cmdObj:{
-    "0.1LinuxPip":"git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd nerveX source r0.3.2 pip install . --user pip install -e . --userf",
-    "0.1LinuxSource":"0.1LinuxSource",
-    "0.1WindowsPip":"0.1WindowsPip",
-    "0.1WindowsSource":"0.1WindowsSource",
-    "0.1MacOSPip":"0.1MacOSPip",
-    "0.1MacOSSource":"0.1MacOSSource",
+  cmdObj: {
+    "0.1LinuxPip": "git clone http://gitlab.bj.sensetime.com/open-XLab/cell/nerveX.git cd nerveX source r0.3.2 pip install . --user pip install -e . --userf",
+    "0.1LinuxSource": "0.1LinuxSource",
+    "0.1WindowsPip": "0.1WindowsPip",
+    "0.1WindowsSource": "0.1WindowsSource",
+    "0.1MacOSPip": "0.1MacOSPip",
+    "0.1MacOSSource": "0.1MacOSSource",
 
-    "0.2LinuxPip":"0.2LinuxPip",
-    "0.2LinuxSource":"0.2LinuxSource",
-    "0.2WindowsPip":"0.2WindowsPip",
-    "0.2WindowsSource":"0.2WindowsSource",
-    "0.2MacOSPip":"0.2MacOSPip",
-    "0.2MacOSSource":"0.2MacOSSource",
+    "0.2LinuxPip": "0.2LinuxPip",
+    "0.2LinuxSource": "0.2LinuxSource",
+    "0.2WindowsPip": "0.2WindowsPip",
+    "0.2WindowsSource": "0.2WindowsSource",
+    "0.2MacOSPip": "0.2MacOSPip",
+    "0.2MacOSSource": "0.2MacOSSource",
 
-    "0.3LinuxPip":"0.3LinuxPip",
-    "0.3LinuxSource":"0.3LinuxSource",
-    "0.3WindowsPip":"0.3WindowsPip",
-    "0.3WindowsSource":"0.3WindowsSource",
-    "0.3MacOSPip":"0.3MacOSPip",
-    "0.3MacOSSource":"0.3MacOSSource",
+    "0.3LinuxPip": "0.3LinuxPip",
+    "0.3LinuxSource": "0.3LinuxSource",
+    "0.3WindowsPip": "0.3WindowsPip",
+    "0.3WindowsSource": "0.3WindowsSource",
+    "0.3MacOSPip": "0.3MacOSPip",
+    "0.3MacOSSource": "0.3MacOSSource",
 
-    "0.4LinuxPip":"0.4LinuxPip",
-    "0.4LinuxSource":"0.4LinuxSource",
-    "0.4WindowsPip":"0.4WindowsPip",
-    "0.4WindowsSource":"0.4WindowsSource",
-    "0.4MacOSPip":"0.4MacOSPip",
-    "0.4MacOSSource":"0.4MacOSSource",
+    "0.4LinuxPip": "0.4LinuxPip",
+    "0.4LinuxSource": "0.4LinuxSource",
+    "0.4WindowsPip": "0.4WindowsPip",
+    "0.4WindowsSource": "0.4WindowsSource",
+    "0.4MacOSPip": "0.4MacOSPip",
+    "0.4MacOSSource": "0.4MacOSSource",
   },
 }
 
+
+// 安装new
+xadConfig.installInfoConfig = {
+  title: 'INSTALLATION',
+}
+// Example
+
+xadConfig.exampleConfig = {
+  title:"EXAMPLE",
+  desc:"We provide Multiple Tests with our Agents",
+  lists:[
+    {
+      title:"1.   human vs agent",
+    videoLink: './static/videos/star/human_vs_agent.mp4',
+
+    },
+    {
+      title:"2.   agent_vs_agent",
+        videoLink: './static/videos/star/agent_vs_agent.mp4',
+
+    },
+    {
+      title:"3.   agent_vs_bot",
+        videoLink: './static/videos/star/agent_vs_bot.mp4',
+    },
+  ]
+}
+
+
 // 文档
- xadConfig.documentInfoConfig = {
+xadConfig.documentInfoConfig = {
   title: "文档",
   content: "open-xlab.pages.gitlab.bj.sensetime.com/cell/nerveX/guide/index.html"
 }
 
 // 数据 dataDetail: 数据详情介绍  dataFormat:数据格式 dataBenchmark:数据评测  dataDownload:数据下载
- xadConfig.dataInfoConfig = {
+xadConfig.dataInfoConfig = {
   title: "数据",
   dataDetail: {
     title: "数据详情介绍",
