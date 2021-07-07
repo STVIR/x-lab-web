@@ -1,4 +1,5 @@
 var xadConfig = {}
+// DiStar
 // HeaderMenu 
 xadConfig.headerMenuConfig = {
   logoText: './static/logos/资源 22@4x.png',
